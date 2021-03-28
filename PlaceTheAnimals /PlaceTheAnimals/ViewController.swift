@@ -12,7 +12,7 @@ class ViewController: UIViewController, UIDragInteractionDelegate {
     @IBOutlet weak var dog: UIImageView!
     @IBOutlet weak var dogplace: UIImageView!
     
-    var counter = 0
+
     var score: Int = 0
     public var highScore: Int = 0
     

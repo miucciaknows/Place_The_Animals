@@ -1,37 +1,33 @@
 //
-//  HamsterViewController.swift
+//  BirdViewController.swift
 //  pickone
 //
-//  Created by Miuccia  on 27/03/21.
+//  Created by Miuccia  on 28/03/21.
 //
 
 import Foundation
 import UIKit
 
-class HamsterViewController: UIViewController, UIDragInteractionDelegate {
+class BirdViewController: UIViewController, UIDragInteractionDelegate  {
+
+    @IBOutlet weak var bird: UIImageView!
     
-    
-    @IBOutlet weak var hamster: UIImageView!
-    
-    @IBOutlet weak var hamsterplace: UIImageView!
-    
-    
-    var score: Int = 20
+    @IBOutlet weak var birdplace: UIImageView!
+    var score: Int = 30
     var highScore: Int = 0
  
-    @IBOutlet weak var scoreLabel: UILabel!
     
     @IBOutlet weak var highScoreLabel: UILabel!
     
+    @IBOutlet weak var scoreLabel: UILabel!
     
     func dragInteraction(_ interaction: UIDragInteraction, itemsForBeginning session: UIDragSession) -> [UIDragItem] {
-        guard let image = hamster.image else { return [] }
+        guard let image = bird.image else { return [] }
         let item = UIDragItem(itemProvider: NSItemProvider(object: image))
         
         return [item]
-        
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -54,20 +50,20 @@ class HamsterViewController: UIViewController, UIDragInteractionDelegate {
         //scoreLabel.text="Pontos: \(score)"
         self.scoreLabel.text = String (format: "%.f", score)
         
-        hamster.image = UIImage(named: "hamster.png")
-        hamster.contentMode = .scaleAspectFit
-        hamster.isUserInteractionEnabled = true
+        bird.image = UIImage(named: "bird.png")
+        bird.contentMode = .scaleAspectFit
+        bird.isUserInteractionEnabled = true
         let dragInteraction = UIDragInteraction(delegate: self)
         dragInteraction.isEnabled = true
-        hamster.addInteraction(dragInteraction)
+        bird.addInteraction(dragInteraction)
         
-        hamsterplace.contentMode = .scaleAspectFit
-        hamsterplace.isUserInteractionEnabled = true
+        birdplace.contentMode = .scaleAspectFit
+        birdplace.isUserInteractionEnabled = true
         let configuration = UIPasteConfiguration(forAccepting: UIImage.self)
-        hamsterplace.pasteConfiguration = configuration
+        birdplace.pasteConfiguration = configuration
         
         
-        let stackView = UIStackView(arrangedSubviews: [hamster, hamsterplace])
+        let stackView = UIStackView(arrangedSubviews: [bird, birdplace])
         view.addSubview(stackView)
         stackView.distribution = .fillEqually
         stackView.frame = view.bounds
@@ -81,12 +77,16 @@ class HamsterViewController: UIViewController, UIDragInteractionDelegate {
             
             UserDefaults.standard.set(highScore, forKey: "Recorde: ")
         }
-    }
     
+    
+    }
+
+
+
     override func paste(itemProviders: [NSItemProvider]) {
         _ = itemProviders.first?.loadObject(ofClass: UIImage.self, completionHandler: { (image: NSItemProviderReading?, error: Error?) in
             DispatchQueue.main.async { [self] in
-                self.hamsterplace.image = image as? UIImage
+                self.birdplace.image = image as? UIImage
                 increaseScore()
                 nextLevel()
             }
@@ -105,25 +105,24 @@ class HamsterViewController: UIViewController, UIDragInteractionDelegate {
         let alert = UIAlertController(title: "Você passou para o próximo nivel", message: "Gostaria de prosseguir? ", preferredStyle: UIAlertController.Style.alert)
         let okButton = UIAlertAction(title: "Não", style: UIAlertAction.Style.cancel, handler: nil)
         let restartButton = UIAlertAction(title: "Sim", style: UIAlertAction.Style.default) { (UIAlertAction) in
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "BirdViewController") as! BirdViewController
-            nextViewController.score = self.score
-            nextViewController.highScore = self.score
-            nextViewController.modalPresentationStyle = .overFullScreen
-            self.present(nextViewController, animated: true, completion: nil)
+        
             
         }
         alert.addAction(okButton)
         alert.addAction(restartButton)
-        self.present(alert, animated: true, completion: nil)
+        //self.present(alert, animated: true, completion: nil)
       
     }
 
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
-
-    
-
-    
-
-
-

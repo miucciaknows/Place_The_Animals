@@ -12,7 +12,7 @@ class CatViewController: UIViewController, UIDragInteractionDelegate {
     @IBOutlet weak var cat: UIImageView!
     @IBOutlet weak var catplace: UIImageView!
     
-    var counter = 0
+
     var score: Int = 10
     var highScore: Int = 0
     
