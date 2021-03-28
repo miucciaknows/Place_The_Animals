@@ -89,10 +89,18 @@ class HamsterViewController: UIViewController, UIDragInteractionDelegate {
                 self.hamsterplace.image = image as? UIImage
                 increaseScore()
                 nextLevel()
+                hideHamster()
             }
         })
         
     }
+    
+    //Function to hide dog when you drop it.
+    //Função para esconder o cachorro quando você usa o drop.
+    @objc func hideHamster(){
+             hamster.isHidden=true
+        
+         }
     
     //Função score
     //Score function
@@ -106,6 +114,8 @@ class HamsterViewController: UIViewController, UIDragInteractionDelegate {
         let okButton = UIAlertAction(title: "Não", style: UIAlertAction.Style.cancel, handler: nil)
         let restartButton = UIAlertAction(title: "Sim", style: UIAlertAction.Style.default) { (UIAlertAction) in
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            //Sleep function, 2 sec delay to go to the next level >
+            sleep(2)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "BirdViewController") as! BirdViewController
             nextViewController.score = self.score
             nextViewController.highScore = self.score

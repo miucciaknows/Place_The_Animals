@@ -22,8 +22,8 @@ class ViewController: UIViewController, UIDragInteractionDelegate {
     func dragInteraction(_ interaction: UIDragInteraction, itemsForBeginning session: UIDragSession) -> [UIDragItem] {
         guard let image = dog.image else { return [] }
         let item = UIDragItem(itemProvider: NSItemProvider(object: image))
-        
         return [item]
+        
     }
     
     override func viewDidLoad() {
@@ -35,7 +35,7 @@ class ViewController: UIViewController, UIDragInteractionDelegate {
         
         if storeHighScore == nil {
             highScore = 0
-            
+
             highScoreLabel.text = "Recorde: \(highScore)"
         }
         
@@ -54,6 +54,7 @@ class ViewController: UIViewController, UIDragInteractionDelegate {
         dog.image = UIImage(named: "dog.png")
         dog.contentMode = .scaleAspectFit
         dog.isUserInteractionEnabled = true
+
         
 //        let previewParameters = UIDragPreviewParameters()
 //        previewParameters.backgroundColor = UIColor.clear
@@ -67,6 +68,7 @@ class ViewController: UIViewController, UIDragInteractionDelegate {
         dogplace.isUserInteractionEnabled = true
         let configuration = UIPasteConfiguration(forAccepting: UIImage.self)
         dogplace.pasteConfiguration = configuration
+        
         
         
         let stackView = UIStackView(arrangedSubviews: [dog, dogplace])
@@ -91,10 +93,20 @@ class ViewController: UIViewController, UIDragInteractionDelegate {
                 self.dogplace.image = image as? UIImage
                 increaseScore()
                 nextLevel()
+                hideDog()
+            
             }
         })
-        
     }
+    
+    
+    //Function to hide dog when you drop it.
+    //Função para esconder o cachorro quando você usa o drop.
+    @objc func hideDog(){
+             dog.isHidden=true
+        
+         }
+    
     
     //Função score
     //Score function
@@ -107,7 +119,8 @@ class ViewController: UIViewController, UIDragInteractionDelegate {
         let alert = UIAlertController(title: "Você passou para o próximo nivel", message: "Gostaria de prosseguir? ", preferredStyle: UIAlertController.Style.alert)
         let okButton = UIAlertAction(title: "Não", style: UIAlertAction.Style.cancel, handler: nil)
         let restartButton = UIAlertAction(title: "Sim", style: UIAlertAction.Style.default) { (UIAlertAction) in
-            
+           	//Sleep function, 2 sec delay to go to the next level >
+            sleep(2)
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "catViewController") as! CatViewController
             nextViewController.score = self.score
@@ -119,6 +132,7 @@ class ViewController: UIViewController, UIDragInteractionDelegate {
         alert.addAction(okButton)
         alert.addAction(restartButton)
         self.present(alert, animated: true, completion: nil)
+        
     }
 }
 

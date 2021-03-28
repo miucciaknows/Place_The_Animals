@@ -85,10 +85,19 @@ class CatViewController: UIViewController, UIDragInteractionDelegate {
                 self.catplace.image = image as? UIImage
                 increaseScore()
                 nextLevel()
+                hideCat()
             }
         })
         
     }
+    
+    
+    //Function to hide dog when you drop it.
+    //Função para esconder o cachorro quando você usa o drop.
+    @objc func hideCat(){
+             cat.isHidden=true
+        
+         }
     
     //Função score
     //Score function
@@ -101,7 +110,8 @@ class CatViewController: UIViewController, UIDragInteractionDelegate {
         let alert = UIAlertController(title: "Você passou para o próximo nivel", message: "Gostaria de prosseguir? ", preferredStyle: UIAlertController.Style.alert)
         let okButton = UIAlertAction(title: "Não", style: UIAlertAction.Style.cancel, handler: nil)
         let restartButton = UIAlertAction(title: "Sim", style: UIAlertAction.Style.default) { (UIAlertAction) in
-            
+            //Sleep function, 2 sec delay to go to the next level >
+            sleep(2)
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "hamsterViewController") as! HamsterViewController
             nextViewController.score = self.score

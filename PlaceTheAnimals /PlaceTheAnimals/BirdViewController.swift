@@ -89,10 +89,18 @@ class BirdViewController: UIViewController, UIDragInteractionDelegate  {
                 self.birdplace.image = image as? UIImage
                 increaseScore()
                 nextLevel()
+                hideBird()
             }
         })
         
     }
+    
+    //Function to hide dog when you drop it.
+    //Função para esconder o cachorro quando você usa o drop.
+    @objc func hideBird(){
+             bird.isHidden=true
+        
+         }
     
     //Função score
     //Score function
@@ -105,7 +113,7 @@ class BirdViewController: UIViewController, UIDragInteractionDelegate  {
         let alert = UIAlertController(title: "Você passou para o próximo nivel", message: "Gostaria de prosseguir? ", preferredStyle: UIAlertController.Style.alert)
         let okButton = UIAlertAction(title: "Não", style: UIAlertAction.Style.cancel, handler: nil)
         let restartButton = UIAlertAction(title: "Sim", style: UIAlertAction.Style.default) { (UIAlertAction) in
-        
+            sleep(2)
             
         }
         alert.addAction(okButton)
