@@ -114,23 +114,21 @@ class BirdViewController: UIViewController, UIDragInteractionDelegate  {
         let okButton = UIAlertAction(title: "Não", style: UIAlertAction.Style.cancel, handler: nil)
         let restartButton = UIAlertAction(title: "Sim", style: UIAlertAction.Style.default) { (UIAlertAction) in
             sleep(2)
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "RabbitViewController") as! RabbitViewController
+            nextViewController.score = self.score
+            nextViewController.highScore = self.score
+            nextViewController.modalPresentationStyle = .overFullScreen
+            self.present(nextViewController, animated: true, completion: nil)
+          
             
         }
+        
         alert.addAction(okButton)
         alert.addAction(restartButton)
-        //self.present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
       
     }
 
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 }

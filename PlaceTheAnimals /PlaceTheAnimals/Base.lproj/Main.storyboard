@@ -77,7 +77,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2" translatesAutoresizingMaskIntoConstraints="NO" id="amF-MH-QyN">
-                                <rect key="frame" x="-532" y="-57" width="1000" height="1080"/>
+                                <rect key="frame" x="-467" y="-340" width="935" height="1646"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="etz-Mk-Lhu">
                                 <rect key="frame" x="12" y="319" width="187" height="227"/>
@@ -143,10 +143,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background3" translatesAutoresizingMaskIntoConstraints="NO" id="Llj-Hn-ZrX">
-                                <rect key="frame" x="-299" y="-836" width="1463" height="2502"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hamster" translatesAutoresizingMaskIntoConstraints="NO" id="RqP-WQ-GSf">
                                 <rect key="frame" x="12" y="319" width="187" height="227"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -171,6 +167,10 @@
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background3" translatesAutoresizingMaskIntoConstraints="NO" id="KUV-5d-gVP">
+                                <rect key="frame" x="-130" y="-196" width="622" height="1092"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sfI-hi-W82"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -196,7 +196,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background4" translatesAutoresizingMaskIntoConstraints="NO" id="qrl-km-6EQ">
-                                <rect key="frame" x="0.0" y="-93" width="774" height="1163"/>
+                                <rect key="frame" x="-493" y="-308" width="907" height="1690"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bird" translatesAutoresizingMaskIntoConstraints="NO" id="KeL-8e-mme">
@@ -233,26 +233,170 @@
                         <outlet property="birdplace" destination="x1Q-v8-1PN" id="N51-SX-cfb"/>
                         <outlet property="highScoreLabel" destination="ETU-FO-4Uk" id="hRR-As-ZX2"/>
                         <outlet property="scoreLabel" destination="NiI-E0-SyR" id="Sve-fM-aa8"/>
+                        <segue destination="3lg-f6-teM" kind="show" id="8LT-1U-H3t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVX-hN-JBm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2000.0000000000002" y="61.607142857142854"/>
         </scene>
+        <!--Rabbit View Controller-->
+        <scene sceneID="hIN-bw-35w">
+            <objects>
+                <viewController storyboardIdentifier="RabbitViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3lg-f6-teM" customClass="RabbitViewController" customModule="pickone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mcm-6c-IID">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background5" translatesAutoresizingMaskIntoConstraints="NO" id="gDS-lV-0EK">
+                                <rect key="frame" x="-78" y="-145" width="634" height="1228"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rabbit" translatesAutoresizingMaskIntoConstraints="NO" id="CIk-zp-5u4">
+                                <rect key="frame" x="12" y="319" width="187" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rabbitplace" translatesAutoresizingMaskIntoConstraints="NO" id="7Rh-b1-uiX">
+                                <rect key="frame" x="207" y="319" width="187" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="gtc-DH-kPw">
+                                <rect key="frame" x="161" y="44" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iH3-I4-q9x">
+                                <rect key="frame" x="133" y="772" width="149.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7IL-Xb-p0Y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wF3-KK-pyM"/>
+                    <connections>
+                        <outlet property="highScoreLabel" destination="iH3-I4-q9x" id="zU9-jL-By2"/>
+                        <outlet property="rabbit" destination="CIk-zp-5u4" id="axK-jb-WSk"/>
+                        <outlet property="rabbitplace" destination="7Rh-b1-uiX" id="Awi-ia-oot"/>
+                        <outlet property="scoreLabel" destination="gtc-DH-kPw" id="hlM-YQ-y15"/>
+                        <segue destination="Xas-U5-LEK" kind="show" id="k7E-ze-EnN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v7k-xj-Mu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2789.8550724637685" y="61.607142857142854"/>
+        </scene>
+        <!--Beard Dragon View Controller-->
+        <scene sceneID="WBZ-Tg-8L4">
+            <objects>
+                <viewController storyboardIdentifier="BeardDragonViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xas-U5-LEK" customClass="BeardDragonViewController" customModule="pickone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OLN-CQ-aqR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background6" translatesAutoresizingMaskIntoConstraints="NO" id="3CR-zO-q6N">
+                                <rect key="frame" x="-12" y="-160" width="625" height="1269"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bearddragonplace" translatesAutoresizingMaskIntoConstraints="NO" id="ddj-yr-3NM">
+                                <rect key="frame" x="207" y="319" width="187" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bearddragon" translatesAutoresizingMaskIntoConstraints="NO" id="0zW-Q6-YZB">
+                                <rect key="frame" x="12" y="319" width="187" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="LKa-CC-Hjh">
+                                <rect key="frame" x="161" y="44" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2W-Ew-dZK">
+                                <rect key="frame" x="133" y="772" width="149.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gEj-qe-wPG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="L2t-nF-SGV"/>
+                    <connections>
+                        <outlet property="bearddragon" destination="0zW-Q6-YZB" id="5ju-U5-bau"/>
+                        <outlet property="bearddragonplace" destination="ddj-yr-3NM" id="0Ot-EL-hTJ"/>
+                        <outlet property="highScoreLabel" destination="f2W-Ew-dZK" id="BKJ-Am-SYq"/>
+                        <outlet property="scoreLabel" destination="LKa-CC-Hjh" id="RMh-yV-7gj"/>
+                        <segue destination="Oug-kg-zCZ" kind="show" id="kpg-ck-Bnc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7mq-7I-Ebu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3572.4637681159425" y="61.607142857142854"/>
+        </scene>
+        <!--Final View Controller-->
+        <scene sceneID="y4a-9r-BQX">
+            <objects>
+                <viewController storyboardIdentifier="FinalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Oug-kg-zCZ" customClass="FinalViewController" customModule="pickone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zgK-px-QLH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundFinal" translatesAutoresizingMaskIntoConstraints="NO" id="bAt-tn-Kq3">
+                                <rect key="frame" x="-43" y="-122" width="570" height="1082"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtZ-FC-K2s">
+                                <rect key="frame" x="133" y="20" width="149.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6nc-5a-4P6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aFa-l5-Ezu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BPW-QJ-4Jk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4407.2463768115949" y="61.607142857142854"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="background" width="500" height="500"/>
-        <image name="background2" width="1000" height="1080"/>
-        <image name="background3" width="800" height="533"/>
-        <image name="background4" width="900" height="1200"/>
-        <image name="bird" width="313" height="313"/>
-        <image name="birdplace" width="313" height="313"/>
-        <image name="cat" width="313" height="313"/>
-        <image name="catplace" width="313" height="313"/>
+        <image name="background" width="6693" height="10630"/>
+        <image name="background2" width="935" height="1646"/>
+        <image name="background3" width="655" height="1389"/>
+        <image name="background4" width="633" height="959"/>
+        <image name="background5" width="633" height="959"/>
+        <image name="background6" width="6693" height="10630"/>
+        <image name="backgroundFinal" width="6693" height="10630"/>
+        <image name="bearddragon" width="315" height="315"/>
+        <image name="bearddragonplace" width="315" height="315"/>
+        <image name="bird" width="315" height="315"/>
+        <image name="birdplace" width="315" height="315"/>
+        <image name="cat" width="315" height="315"/>
+        <image name="catplace" width="315" height="315"/>
         <image name="dog" width="256" height="256"/>
         <image name="dogsplace" width="256" height="256"/>
-        <image name="hamster" width="313" height="313"/>
-        <image name="hamsterplace" width="313" height="313"/>
+        <image name="hamster" width="852" height="824"/>
+        <image name="hamsterplace" width="852" height="824"/>
+        <image name="rabbit" width="315" height="315"/>
+        <image name="rabbitplace" width="315" height="315"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
