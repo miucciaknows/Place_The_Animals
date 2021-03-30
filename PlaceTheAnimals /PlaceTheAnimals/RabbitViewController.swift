@@ -118,9 +118,7 @@ class RabbitViewController: UIViewController, UIDragInteractionDelegate  {
                 nextViewController.highScore = self.score
                 nextViewController.modalPresentationStyle = .overFullScreen
                 self.present(nextViewController, animated: true, completion: nil)
-               
-              
-                
+       
             }
             
             alert.addAction(okButton)
