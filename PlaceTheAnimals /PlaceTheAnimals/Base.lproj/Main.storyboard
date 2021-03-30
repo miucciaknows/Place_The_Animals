@@ -143,6 +143,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background3" translatesAutoresizingMaskIntoConstraints="NO" id="KUV-5d-gVP">
+                                <rect key="frame" x="-130" y="-196" width="622" height="1092"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hamster" translatesAutoresizingMaskIntoConstraints="NO" id="RqP-WQ-GSf">
                                 <rect key="frame" x="12" y="319" width="187" height="227"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -167,10 +171,6 @@
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background3" translatesAutoresizingMaskIntoConstraints="NO" id="KUV-5d-gVP">
-                                <rect key="frame" x="-130" y="-196" width="622" height="1092"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sfI-hi-W82"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -371,10 +371,50 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="aFa-l5-Ezu"/>
+                    <connections>
+                        <segue destination="0mC-hV-7TS" kind="show" id="NUb-Uh-24z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPW-QJ-4Jk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4407.2463768115949" y="61.607142857142854"/>
+        </scene>
+        <!--Cancel View Controller-->
+        <scene sceneID="rmE-c8-Zpp">
+            <objects>
+                <viewController storyboardIdentifier="CancelViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0mC-hV-7TS" customClass="CancelViewController" customModule="pickone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q5S-zk-Ocz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundCancel" translatesAutoresizingMaskIntoConstraints="NO" id="a7S-za-qCN">
+                                <rect key="frame" x="0.0" y="-148" width="621" height="1139"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ballon" translatesAutoresizingMaskIntoConstraints="NO" id="8Ke-kP-16C">
+                                <rect key="frame" x="0.0" y="242" width="205" height="234"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sadRabbit" translatesAutoresizingMaskIntoConstraints="NO" id="6sc-Zz-rT8">
+                                <rect key="frame" x="154" y="372" width="248" height="264"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Até a próxima vez!" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hlb-kB-TgU">
+                                <rect key="frame" x="10" y="330" width="173" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="0.37723368410000002" blue="0.45732599499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vBa-A1-Rqg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6o7-mL-okw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="imH-nv-NID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5221.739130434783" y="61.607142857142854"/>
         </scene>
     </scenes>
     <resources>
@@ -384,7 +424,9 @@
         <image name="background4" width="633" height="959"/>
         <image name="background5" width="633" height="959"/>
         <image name="background6" width="6693" height="10630"/>
+        <image name="backgroundCancel" width="6693" height="10630"/>
         <image name="backgroundFinal" width="6693" height="10630"/>
+        <image name="ballon" width="920" height="823"/>
         <image name="bearddragon" width="315" height="315"/>
         <image name="bearddragonplace" width="315" height="315"/>
         <image name="bird" width="315" height="315"/>
@@ -397,6 +439,7 @@
         <image name="hamsterplace" width="852" height="824"/>
         <image name="rabbit" width="315" height="315"/>
         <image name="rabbitplace" width="315" height="315"/>
+        <image name="sadRabbit" width="315" height="315"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

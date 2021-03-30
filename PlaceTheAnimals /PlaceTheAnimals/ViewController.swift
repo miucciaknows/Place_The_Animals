@@ -117,7 +117,16 @@ class ViewController: UIViewController, UIDragInteractionDelegate {
     
     @objc func nextLevel() {
         let alert = UIAlertController(title: "Você passou para o próximo nivel", message: "Gostaria de prosseguir? ", preferredStyle: UIAlertController.Style.alert)
-        let okButton = UIAlertAction(title: "Não", style: UIAlertAction.Style.cancel, handler: nil)
+        //let okButton = UIAlertAction(title: "Não", style: UIAlertAction.Style.cancel, handler: nil)
+        let noButton = UIAlertAction (title: "Não", style: UIAlertAction.Style.default) { (UIAlertAction) in
+            sleep(1)
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CancelViewController") as! CancelViewController
+            nextViewController.highScore = self.score
+            nextViewController.modalPresentationStyle = .overFullScreen
+            self.present(nextViewController, animated: true, completion: nil)
+            
+        }
         let restartButton = UIAlertAction(title: "Sim", style: UIAlertAction.Style.default) { (UIAlertAction) in
            	//Sleep function, 2 sec delay to go to the next level >
             sleep(2)
@@ -129,7 +138,8 @@ class ViewController: UIViewController, UIDragInteractionDelegate {
             self.present(nextViewController, animated: true, completion: nil)
         }
         
-        alert.addAction(okButton)
+        //alert.addAction(okButton)
+        alert.addAction(noButton)
         alert.addAction(restartButton)
         self.present(alert, animated: true, completion: nil)
         
