@@ -19,10 +19,15 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="jiw-vM-8nG" userLabel="Background">
                                 <rect key="frame" x="-12" y="-31" width="426" height="927"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dog" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="73o-Ge-3ZD">
-                                <rect key="frame" x="12" y="319" width="187" height="227"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dog" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="73o-Ge-3ZD">
+                                <rect key="frame" x="20" y="93" width="171" height="178"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pg3-3p-enC" appends="YES" id="A3T-0G-ffa"/>
+                                    <outletCollection property="gestureRecognizers" destination="Wx4-va-gPg" appends="YES" id="3LQ-Fk-lfM"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="High Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4L-lG-zKy">
                                 <rect key="frame" x="118" y="826" width="178" height="36"/>
@@ -39,8 +44,8 @@
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dogsplace" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Ym-Rc-ad4">
-                                <rect key="frame" x="207" y="319" width="187" height="227"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="177" y="537" width="187" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -65,8 +70,20 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer scale="3" id="pg3-3p-enC">
+                    <connections>
+                        <action selector="handlePinch:" destination="BYZ-38-t0r" id="tX5-Z4-TRB"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="GVf-eX-z5r"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Wx4-va-gPg">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="noN-P4-LUJ"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="sYu-IN-qFc"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-371" y="62"/>
+            <point key="canvasLocation" x="-371.01449275362324" y="61.607142857142854"/>
         </scene>
         <!--Cat View Controller-->
         <scene sceneID="wjK-aJ-v13">
@@ -77,13 +94,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2" translatesAutoresizingMaskIntoConstraints="NO" id="amF-MH-QyN">
-                                <rect key="frame" x="-467" y="-340" width="935" height="1646"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="etz-Mk-Lhu">
-                                <rect key="frame" x="12" y="319" width="187" height="227"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="etz-Mk-Lhu" secondAttribute="height" multiplier="102:115" id="brD-Gb-RAO"/>
-                                </constraints>
+                                <rect key="frame" x="-467" y="-117" width="935" height="1646"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="HA6-vh-GqH">
                                 <rect key="frame" x="161" y="44" width="92" height="41"/>
@@ -93,8 +104,8 @@
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="catplace" translatesAutoresizingMaskIntoConstraints="NO" id="2f2-ne-S65">
-                                <rect key="frame" x="207" y="319" width="187" height="227"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="catplace" translatesAutoresizingMaskIntoConstraints="NO" id="2f2-ne-S65">
+                                <rect key="frame" x="227" y="93" width="187" height="227"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="PLz-4n-tIV"/>
                                     <constraint firstAttribute="width" secondItem="2f2-ne-S65" secondAttribute="height" multiplier="102:115" id="p0d-JZ-Zrk"/>
@@ -107,6 +118,18 @@
                                 <color key="textColor" systemColor="systemTealColor"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" id="etz-Mk-Lhu">
+                                <rect key="frame" x="20" y="591" width="187" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="etz-Mk-Lhu" secondAttribute="height" multiplier="102:115" id="brD-Gb-RAO"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="NEr-7Q-lh6" appends="YES" id="Ekf-Op-nnb"/>
+                                    <outletCollection property="gestureRecognizers" destination="LiI-1M-nD1" appends="YES" id="N1E-4W-17C"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8v5-3W-0rR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -132,13 +155,25 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAW-xP-7jg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="NEr-7Q-lh6">
+                    <connections>
+                        <action selector="handlePan:" destination="8Jf-Gz-eJA" id="G8X-mD-17v"/>
+                        <outlet property="delegate" destination="8Jf-Gz-eJA" id="PR6-Ic-Uyn"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="LiI-1M-nD1">
+                    <connections>
+                        <action selector="handlePinch:" destination="8Jf-Gz-eJA" id="siF-OQ-giS"/>
+                        <outlet property="delegate" destination="8Jf-Gz-eJA" id="LKQ-4i-OHl"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="401" y="62"/>
         </scene>
         <!--Hamster View Controller-->
         <scene sceneID="65a-kJ-lZu">
             <objects>
-                <viewController storyboardIdentifier="hamsterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7jx-Ch-yr7" customClass="HamsterViewController" customModule="pickone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HamsterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7jx-Ch-yr7" customClass="HamsterViewController" customModule="pickone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CMi-3K-Haa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,13 +182,18 @@
                                 <rect key="frame" x="-130" y="-196" width="622" height="1092"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hamster" translatesAutoresizingMaskIntoConstraints="NO" id="RqP-WQ-GSf">
-                                <rect key="frame" x="12" y="319" width="187" height="227"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hamster" translatesAutoresizingMaskIntoConstraints="NO" id="RqP-WQ-GSf">
+                                <rect key="frame" x="0.0" y="128" width="187" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vDF-Pg-TSB" appends="YES" id="Emi-bj-WeF"/>
+                                    <outletCollection property="gestureRecognizers" destination="mqz-yQ-riq" appends="YES" id="G3g-ID-LhK"/>
+                                </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hamsterplace" translatesAutoresizingMaskIntoConstraints="NO" id="NEr-e1-ouK">
-                                <rect key="frame" x="207" y="319" width="187" height="227"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hamsterplace" translatesAutoresizingMaskIntoConstraints="NO" id="NEr-e1-ouK">
+                                <rect key="frame" x="207" y="128" width="187" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCk-Xn-ls3">
                                 <rect key="frame" x="133" y="826" width="149.5" height="36"/>
@@ -167,6 +207,7 @@
                                 <rect key="frame" x="161" y="44" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -184,6 +225,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEd-05-KLP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="vDF-Pg-TSB"/>
+                <pinchGestureRecognizer id="mqz-yQ-riq"/>
             </objects>
             <point key="canvasLocation" x="1195.6521739130435" y="61.607142857142854"/>
         </scene>
@@ -199,10 +242,6 @@
                                 <rect key="frame" x="-493" y="-308" width="907" height="1690"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bird" translatesAutoresizingMaskIntoConstraints="NO" id="KeL-8e-mme">
-                                <rect key="frame" x="12" y="319" width="187" height="227"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="NiI-E0-SyR">
                                 <rect key="frame" x="161" y="20" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -211,9 +250,9 @@
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="birdplace" translatesAutoresizingMaskIntoConstraints="NO" id="x1Q-v8-1PN">
-                                <rect key="frame" x="207" y="319" width="187" height="227"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="birdplace" translatesAutoresizingMaskIntoConstraints="NO" id="x1Q-v8-1PN">
+                                <rect key="frame" x="114" y="105" width="187" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETU-FO-4Uk">
                                 <rect key="frame" x="133" y="772" width="149.5" height="36"/>
@@ -223,6 +262,15 @@
                                 <color key="textColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bird" translatesAutoresizingMaskIntoConstraints="NO" id="KeL-8e-mme">
+                                <rect key="frame" x="67" y="468" width="281" height="296"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="58b-k5-iBM" appends="YES" id="Dw6-0O-VmW"/>
+                                    <outletCollection property="gestureRecognizers" destination="4je-tV-Is9" appends="YES" id="1LC-iB-PUk"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S3y-bM-fN0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -237,6 +285,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVX-hN-JBm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="58b-k5-iBM"/>
+                <pinchGestureRecognizer id="4je-tV-Is9"/>
             </objects>
             <point key="canvasLocation" x="2000.0000000000002" y="61.607142857142854"/>
         </scene>
@@ -252,13 +302,9 @@
                                 <rect key="frame" x="-78" y="-145" width="634" height="1228"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rabbit" translatesAutoresizingMaskIntoConstraints="NO" id="CIk-zp-5u4">
-                                <rect key="frame" x="12" y="319" width="187" height="227"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rabbitplace" translatesAutoresizingMaskIntoConstraints="NO" id="7Rh-b1-uiX">
-                                <rect key="frame" x="207" y="319" width="187" height="227"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rabbitplace" translatesAutoresizingMaskIntoConstraints="NO" id="7Rh-b1-uiX">
+                                <rect key="frame" x="207" y="537" width="187" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="gtc-DH-kPw">
                                 <rect key="frame" x="161" y="44" width="92" height="30"/>
@@ -276,6 +322,15 @@
                                 <color key="textColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rabbit" translatesAutoresizingMaskIntoConstraints="NO" id="CIk-zp-5u4">
+                                <rect key="frame" x="20" y="82" width="144" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="oFE-bj-qqB" appends="YES" id="0Q3-el-sEB"/>
+                                    <outletCollection property="gestureRecognizers" destination="gBG-Qj-ZwP" appends="YES" id="1Sm-b0-ees"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7IL-Xb-p0Y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -290,6 +345,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7k-xj-Mu5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="oFE-bj-qqB"/>
+                <pinchGestureRecognizer id="gBG-Qj-ZwP"/>
             </objects>
             <point key="canvasLocation" x="2789.8550724637685" y="61.607142857142854"/>
         </scene>
@@ -305,13 +362,18 @@
                                 <rect key="frame" x="-12" y="-160" width="625" height="1269"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bearddragonplace" translatesAutoresizingMaskIntoConstraints="NO" id="ddj-yr-3NM">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bearddragonplace" translatesAutoresizingMaskIntoConstraints="NO" id="ddj-yr-3NM">
                                 <rect key="frame" x="207" y="319" width="187" height="227"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bearddragon" translatesAutoresizingMaskIntoConstraints="NO" id="0zW-Q6-YZB">
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bearddragon" translatesAutoresizingMaskIntoConstraints="NO" id="0zW-Q6-YZB">
                                 <rect key="frame" x="12" y="319" width="187" height="227"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7Vs-go-wvb" appends="YES" id="rkZ-tI-YPm"/>
+                                    <outletCollection property="gestureRecognizers" destination="9gw-7E-HSb" appends="YES" id="OvK-ha-15X"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="LKa-CC-Hjh">
                                 <rect key="frame" x="161" y="44" width="92" height="30"/>
@@ -343,6 +405,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mq-7I-Ebu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="7Vs-go-wvb"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="9gw-7E-HSb"/>
             </objects>
             <point key="canvasLocation" x="3572.4637681159425" y="61.607142857142854"/>
         </scene>
@@ -370,13 +434,13 @@
                                 <color key="textColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dogend" translatesAutoresizingMaskIntoConstraints="NO" id="gnk-lC-Ekc">
+                            <imageView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dogend" translatesAutoresizingMaskIntoConstraints="NO" id="gnk-lC-Ekc">
                                 <rect key="frame" x="82" y="275" width="250" height="292"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="final2" translatesAutoresizingMaskIntoConstraints="NO" id="Qkl-j7-O5y">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="203"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6nc-5a-4P6"/>
@@ -405,18 +469,18 @@
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ballon" translatesAutoresizingMaskIntoConstraints="NO" id="8Ke-kP-16C">
                                 <rect key="frame" x="0.0" y="242" width="205" height="234"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Até a próxima vez!" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hlb-kB-TgU">
                                 <rect key="frame" x="20" y="330" width="154" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="0.37723368410000002" blue="0.45732599499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sadRabbit" translatesAutoresizingMaskIntoConstraints="NO" id="6sc-Zz-rT8">
                                 <rect key="frame" x="154" y="372" width="248" height="264"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vBa-A1-Rqg"/>
