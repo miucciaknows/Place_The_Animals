@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EAE6A5F02BADEA11003E43B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A5EF2BADEA11003E43B3 /* AppDelegate.swift */; };
+		EAE6A5F22BADEA11003E43B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A5F12BADEA11003E43B3 /* SceneDelegate.swift */; };
+		EAE6A5F42BADEA11003E43B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A5F32BADEA11003E43B3 /* ViewController.swift */; };
+		EAE6A5F72BADEA11003E43B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A5F52BADEA11003E43B3 /* Main.storyboard */; };
+		EAE6A5F92BADEA13003E43B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A5F82BADEA13003E43B3 /* Assets.xcassets */; };
+		EAE6A5FC2BADEA13003E43B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A5FA2BADEA13003E43B3 /* LaunchScreen.storyboard */; };
+		EAE6A6072BADEA13003E43B3 /* Place_the_AnimalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6062BADEA13003E43B3 /* Place_the_AnimalsTests.swift */; };
+		EAE6A6112BADEA13003E43B3 /* Place_the_AnimalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6102BADEA13003E43B3 /* Place_the_AnimalsUITests.swift */; };
+		EAE6A6132BADEA13003E43B3 /* Place_the_AnimalsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6122BADEA13003E43B3 /* Place_the_AnimalsUITestsLaunchTests.swift */; };
+		EAE6A6202BADEA5C003E43B3 /* AnimalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A61F2BADEA5C003E43B3 /* AnimalPresenter.swift */; };
+		EAE6A6222BADEA76003E43B3 /* AnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6212BADEA76003E43B3 /* AnimalView.swift */; };
+		EAE6A6242BADEA8B003E43B3 /* AnimalGestureHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6232BADEA8B003E43B3 /* AnimalGestureHandlerDelegate.swift */; };
+		EAE6A6262BADEB40003E43B3 /* DogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6252BADEB40003E43B3 /* DogViewController.swift */; };
+		EAE6A6272BADEDCD003E43B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A5F52BADEA11003E43B3 /* Main.storyboard */; };
+		EAE6A6282BADEDCE003E43B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A5F52BADEA11003E43B3 /* Main.storyboard */; };
+		EAE6A62A2BADF220003E43B3 /* AnimalPlacementLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6292BADF220003E43B3 /* AnimalPlacementLogic.swift */; };
+		EAE6A62B2BADF3D4003E43B3 /* AnimalGestureHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6232BADEA8B003E43B3 /* AnimalGestureHandlerDelegate.swift */; };
+		EAE6A62C2BADF3D4003E43B3 /* AnimalGestureHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6232BADEA8B003E43B3 /* AnimalGestureHandlerDelegate.swift */; };
+		EAE6A62D2BADF3D8003E43B3 /* AnimalPlacementLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6292BADF220003E43B3 /* AnimalPlacementLogic.swift */; };
+		EAE6A62E2BADF3D9003E43B3 /* AnimalPlacementLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6292BADF220003E43B3 /* AnimalPlacementLogic.swift */; };
+		EAE6A62F2BADF3E1003E43B3 /* DogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6252BADEB40003E43B3 /* DogViewController.swift */; };
+		EAE6A6302BADF3E2003E43B3 /* DogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6252BADEB40003E43B3 /* DogViewController.swift */; };
+		EAE6A6322BAE01DE003E43B3 /* RabbitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6312BAE01DE003E43B3 /* RabbitViewController.swift */; };
+		EAE6A6332BAE01DE003E43B3 /* RabbitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6312BAE01DE003E43B3 /* RabbitViewController.swift */; };
+		EAE6A6342BAE01DE003E43B3 /* RabbitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6312BAE01DE003E43B3 /* RabbitViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EAE6A6032BADEA13003E43B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAE6A5E42BADEA11003E43B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAE6A5EB2BADEA11003E43B3;
+			remoteInfo = Place_the_Animals;
+		};
+		EAE6A60D2BADEA13003E43B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAE6A5E42BADEA11003E43B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAE6A5EB2BADEA11003E43B3;
+			remoteInfo = Place_the_Animals;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EAE6A5EC2BADEA11003E43B3 /* Place_the_Animals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Place_the_Animals.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAE6A5EF2BADEA11003E43B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EAE6A5F12BADEA11003E43B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EAE6A5F32BADEA11003E43B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EAE6A5F62BADEA11003E43B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EAE6A5F82BADEA13003E43B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAE6A5FB2BADEA13003E43B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EAE6A5FD2BADEA13003E43B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAE6A6022BADEA13003E43B3 /* Place_the_AnimalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Place_the_AnimalsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAE6A6062BADEA13003E43B3 /* Place_the_AnimalsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place_the_AnimalsTests.swift; sourceTree = "<group>"; };
+		EAE6A60C2BADEA13003E43B3 /* Place_the_AnimalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Place_the_AnimalsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAE6A6102BADEA13003E43B3 /* Place_the_AnimalsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place_the_AnimalsUITests.swift; sourceTree = "<group>"; };
+		EAE6A6122BADEA13003E43B3 /* Place_the_AnimalsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place_the_AnimalsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EAE6A61F2BADEA5C003E43B3 /* AnimalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPresenter.swift; sourceTree = "<group>"; };
+		EAE6A6212BADEA76003E43B3 /* AnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalView.swift; sourceTree = "<group>"; };
+		EAE6A6232BADEA8B003E43B3 /* AnimalGestureHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGestureHandlerDelegate.swift; sourceTree = "<group>"; };
+		EAE6A6252BADEB40003E43B3 /* DogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewController.swift; sourceTree = "<group>"; };
+		EAE6A6292BADF220003E43B3 /* AnimalPlacementLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPlacementLogic.swift; sourceTree = "<group>"; };
+		EAE6A6312BAE01DE003E43B3 /* RabbitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RabbitViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EAE6A5E92BADEA11003E43B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE6A5FF2BADEA13003E43B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE6A6092BADEA13003E43B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EAE6A5E32BADEA11003E43B3 = {
+			isa = PBXGroup;
+			children = (
+				EAE6A5EE2BADEA11003E43B3 /* Place_the_Animals */,
+				EAE6A6052BADEA13003E43B3 /* Place_the_AnimalsTests */,
+				EAE6A60F2BADEA13003E43B3 /* Place_the_AnimalsUITests */,
+				EAE6A5ED2BADEA11003E43B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EAE6A5ED2BADEA11003E43B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAE6A5EC2BADEA11003E43B3 /* Place_the_Animals.app */,
+				EAE6A6022BADEA13003E43B3 /* Place_the_AnimalsTests.xctest */,
+				EAE6A60C2BADEA13003E43B3 /* Place_the_AnimalsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAE6A5EE2BADEA11003E43B3 /* Place_the_Animals */ = {
+			isa = PBXGroup;
+			children = (
+				EAE6A5EF2BADEA11003E43B3 /* AppDelegate.swift */,
+				EAE6A5F12BADEA11003E43B3 /* SceneDelegate.swift */,
+				EAE6A5F32BADEA11003E43B3 /* ViewController.swift */,
+				EAE6A61F2BADEA5C003E43B3 /* AnimalPresenter.swift */,
+				EAE6A6212BADEA76003E43B3 /* AnimalView.swift */,
+				EAE6A6252BADEB40003E43B3 /* DogViewController.swift */,
+				EAE6A6312BAE01DE003E43B3 /* RabbitViewController.swift */,
+				EAE6A6232BADEA8B003E43B3 /* AnimalGestureHandlerDelegate.swift */,
+				EAE6A6292BADF220003E43B3 /* AnimalPlacementLogic.swift */,
+				EAE6A5F52BADEA11003E43B3 /* Main.storyboard */,
+				EAE6A5F82BADEA13003E43B3 /* Assets.xcassets */,
+				EAE6A5FA2BADEA13003E43B3 /* LaunchScreen.storyboard */,
+				EAE6A5FD2BADEA13003E43B3 /* Info.plist */,
+			);
+			path = Place_the_Animals;
+			sourceTree = "<group>";
+		};
+		EAE6A6052BADEA13003E43B3 /* Place_the_AnimalsTests */ = {
+			isa = PBXGroup;
+			children = (
+				EAE6A6062BADEA13003E43B3 /* Place_the_AnimalsTests.swift */,
+			);
+			path = Place_the_AnimalsTests;
+			sourceTree = "<group>";
+		};
+		EAE6A60F2BADEA13003E43B3 /* Place_the_AnimalsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EAE6A6102BADEA13003E43B3 /* Place_the_AnimalsUITests.swift */,
+				EAE6A6122BADEA13003E43B3 /* Place_the_AnimalsUITestsLaunchTests.swift */,
+			);
+			path = Place_the_AnimalsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EAE6A5EB2BADEA11003E43B3 /* Place_the_Animals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAE6A6162BADEA13003E43B3 /* Build configuration list for PBXNativeTarget "Place_the_Animals" */;
+			buildPhases = (
+				EAE6A5E82BADEA11003E43B3 /* Sources */,
+				EAE6A5E92BADEA11003E43B3 /* Frameworks */,
+				EAE6A5EA2BADEA11003E43B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Place_the_Animals;
+			productName = Place_the_Animals;
+			productReference = EAE6A5EC2BADEA11003E43B3 /* Place_the_Animals.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EAE6A6012BADEA13003E43B3 /* Place_the_AnimalsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAE6A6192BADEA13003E43B3 /* Build configuration list for PBXNativeTarget "Place_the_AnimalsTests" */;
+			buildPhases = (
+				EAE6A5FE2BADEA13003E43B3 /* Sources */,
+				EAE6A5FF2BADEA13003E43B3 /* Frameworks */,
+				EAE6A6002BADEA13003E43B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAE6A6042BADEA13003E43B3 /* PBXTargetDependency */,
+			);
+			name = Place_the_AnimalsTests;
+			productName = Place_the_AnimalsTests;
+			productReference = EAE6A6022BADEA13003E43B3 /* Place_the_AnimalsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EAE6A60B2BADEA13003E43B3 /* Place_the_AnimalsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAE6A61C2BADEA13003E43B3 /* Build configuration list for PBXNativeTarget "Place_the_AnimalsUITests" */;
+			buildPhases = (
+				EAE6A6082BADEA13003E43B3 /* Sources */,
+				EAE6A6092BADEA13003E43B3 /* Frameworks */,
+				EAE6A60A2BADEA13003E43B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAE6A60E2BADEA13003E43B3 /* PBXTargetDependency */,
+			);
+			name = Place_the_AnimalsUITests;
+			productName = Place_the_AnimalsUITests;
+			productReference = EAE6A60C2BADEA13003E43B3 /* Place_the_AnimalsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EAE6A5E42BADEA11003E43B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					EAE6A5EB2BADEA11003E43B3 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					EAE6A6012BADEA13003E43B3 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = EAE6A5EB2BADEA11003E43B3;
+					};
+					EAE6A60B2BADEA13003E43B3 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = EAE6A5EB2BADEA11003E43B3;
+					};
+				};
+			};
+			buildConfigurationList = EAE6A5E72BADEA11003E43B3 /* Build configuration list for PBXProject "Place_the_Animals" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EAE6A5E32BADEA11003E43B3;
+			productRefGroup = EAE6A5ED2BADEA11003E43B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAE6A5EB2BADEA11003E43B3 /* Place_the_Animals */,
+				EAE6A6012BADEA13003E43B3 /* Place_the_AnimalsTests */,
+				EAE6A60B2BADEA13003E43B3 /* Place_the_AnimalsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EAE6A5EA2BADEA11003E43B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAE6A5FC2BADEA13003E43B3 /* LaunchScreen.storyboard in Resources */,
+				EAE6A5F92BADEA13003E43B3 /* Assets.xcassets in Resources */,
+				EAE6A5F72BADEA11003E43B3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE6A6002BADEA13003E43B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAE6A6272BADEDCD003E43B3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE6A60A2BADEA13003E43B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAE6A6282BADEDCE003E43B3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAE6A5E82BADEA11003E43B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAE6A6222BADEA76003E43B3 /* AnimalView.swift in Sources */,
+				EAE6A5F42BADEA11003E43B3 /* ViewController.swift in Sources */,
+				EAE6A6242BADEA8B003E43B3 /* AnimalGestureHandlerDelegate.swift in Sources */,
+				EAE6A6322BAE01DE003E43B3 /* RabbitViewController.swift in Sources */,
+				EAE6A5F02BADEA11003E43B3 /* AppDelegate.swift in Sources */,
+				EAE6A6202BADEA5C003E43B3 /* AnimalPresenter.swift in Sources */,
+				EAE6A5F22BADEA11003E43B3 /* SceneDelegate.swift in Sources */,
+				EAE6A62A2BADF220003E43B3 /* AnimalPlacementLogic.swift in Sources */,
+				EAE6A6262BADEB40003E43B3 /* DogViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE6A5FE2BADEA13003E43B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAE6A6072BADEA13003E43B3 /* Place_the_AnimalsTests.swift in Sources */,
+				EAE6A6332BAE01DE003E43B3 /* RabbitViewController.swift in Sources */,
+				EAE6A62B2BADF3D4003E43B3 /* AnimalGestureHandlerDelegate.swift in Sources */,
+				EAE6A62D2BADF3D8003E43B3 /* AnimalPlacementLogic.swift in Sources */,
+				EAE6A62F2BADF3E1003E43B3 /* DogViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE6A6082BADEA13003E43B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAE6A6342BAE01DE003E43B3 /* RabbitViewController.swift in Sources */,
+				EAE6A62C2BADF3D4003E43B3 /* AnimalGestureHandlerDelegate.swift in Sources */,
+				EAE6A6132BADEA13003E43B3 /* Place_the_AnimalsUITestsLaunchTests.swift in Sources */,
+				EAE6A62E2BADF3D9003E43B3 /* AnimalPlacementLogic.swift in Sources */,
+				EAE6A6302BADF3E2003E43B3 /* DogViewController.swift in Sources */,
+				EAE6A6112BADEA13003E43B3 /* Place_the_AnimalsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAE6A6042BADEA13003E43B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAE6A5EB2BADEA11003E43B3 /* Place_the_Animals */;
+			targetProxy = EAE6A6032BADEA13003E43B3 /* PBXContainerItemProxy */;
+		};
+		EAE6A60E2BADEA13003E43B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAE6A5EB2BADEA11003E43B3 /* Place_the_Animals */;
+			targetProxy = EAE6A60D2BADEA13003E43B3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EAE6A5F52BADEA11003E43B3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAE6A5F62BADEA11003E43B3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EAE6A5FA2BADEA13003E43B3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAE6A5FB2BADEA13003E43B3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EAE6A6142BADEA13003E43B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EAE6A6152BADEA13003E43B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EAE6A6172BADEA13003E43B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Place_the_Animals/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NathaliaTrazzi.Place-the-Animals";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EAE6A6182BADEA13003E43B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Place_the_Animals/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NathaliaTrazzi.Place-the-Animals";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EAE6A61A2BADEA13003E43B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NathaliaTrazzi.Place-the-AnimalsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Place_the_Animals.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Place_the_Animals";
+			};
+			name = Debug;
+		};
+		EAE6A61B2BADEA13003E43B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NathaliaTrazzi.Place-the-AnimalsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Place_the_Animals.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Place_the_Animals";
+			};
+			name = Release;
+		};
+		EAE6A61D2BADEA13003E43B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NathaliaTrazzi.Place-the-AnimalsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Place_the_Animals;
+			};
+			name = Debug;
+		};
+		EAE6A61E2BADEA13003E43B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NathaliaTrazzi.Place-the-AnimalsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Place_the_Animals;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EAE6A5E72BADEA11003E43B3 /* Build configuration list for PBXProject "Place_the_Animals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAE6A6142BADEA13003E43B3 /* Debug */,
+				EAE6A6152BADEA13003E43B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAE6A6162BADEA13003E43B3 /* Build configuration list for PBXNativeTarget "Place_the_Animals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAE6A6172BADEA13003E43B3 /* Debug */,
+				EAE6A6182BADEA13003E43B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAE6A6192BADEA13003E43B3 /* Build configuration list for PBXNativeTarget "Place_the_AnimalsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAE6A61A2BADEA13003E43B3 /* Debug */,
+				EAE6A61B2BADEA13003E43B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAE6A61C2BADEA13003E43B3 /* Build configuration list for PBXNativeTarget "Place_the_AnimalsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAE6A61D2BADEA13003E43B3 /* Debug */,
+				EAE6A61E2BADEA13003E43B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EAE6A5E42BADEA11003E43B3 /* Project object */;
+}
