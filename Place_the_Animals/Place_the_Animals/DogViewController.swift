@@ -9,10 +9,7 @@ import Foundation
 import UIKit
 
 
-class DogViewController: UIViewController, AnimalPlacementDelegate  {
-    
-    var animalView: AnimalView!
-    var gestureHandler: AnimalGestureHandler!
+class DogViewController: UIViewController, AnimalGestureHandlerDelegate {
     
     
     @IBOutlet weak var scoreLabel: UILabel!
@@ -24,31 +21,42 @@ class DogViewController: UIViewController, AnimalPlacementDelegate  {
     
     
     var score = 0 {
-           didSet {
-               scoreLabel.text = "Pontos: \(score)"
-           }
-       }
-       
-       override func viewDidLoad() {
-           super.viewDidLoad()
-           setupAnimalView()
-           
-           gestureHandler = AnimalGestureHandler(viewController: self, animal: dog, placeholder: dogplace, scoreLabel: scoreLabel)
-           gestureHandler.setupPanGesture(for: dog)
-       }
-       
-       private func setupAnimalView() {
-           animalView = AnimalView(frame: dogplace.bounds)
-           dogplace.addSubview(animalView)
-       }
-       
-       func checkIfAnimalIsInPlace(animal: UIImageView, placeholder: UIImageView, scoreLabel: UILabel) {
-           let dogFrame = dog.convert(dog.bounds, to: view)
-           let dogplaceFrame = dogplace.frame
-           
-           if dogFrame.intersects(dogplaceFrame) {
-               dogplace.isHidden = true
-               score = 50
-           }
-       }
-   }
+          didSet {
+              if score == 50 {
+                  print("Pontuação atingiu 50 pontos. Iniciando transição para RabbitViewController.")
+                  transitionToRabbitViewController()
+              }
+          }
+      }
+      
+      var gestureHandler: GestureHandler!
+      
+      override func viewDidLoad() {
+          super.viewDidLoad()
+          gestureHandler = GestureHandler(view: dog)
+          gestureHandler.delegate = self
+      }
+      
+      func checkIfAnimalIsInPlace() {
+          let animalCenter = CGPoint(x: dog.frame.midX, y: dog.frame.midY)
+          if dogplace.frame.contains(animalCenter) {
+              dogplace.isHidden = true
+              score += 50
+              scoreLabel.text = "Score: \(score)"
+              print("Pontuação atualizada para \(score)")
+          }
+      }
+
+     @objc func transitionToRabbitViewController() {
+         // Transição para o RabbitViewController
+         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+         if let rabbitViewController = storyboard.instantiateViewController(withIdentifier: "RabbitViewController") as? RabbitViewController {
+             print("RabbitViewController instanciado com sucesso.")
+             rabbitViewController.currentScore = self.score
+             rabbitViewController.modalPresentationStyle = .overFullScreen
+             present(rabbitViewController, animated: true, completion: nil)
+         } else {
+             print("Erro ao instanciar RabbitViewController")
+         }
+     }
+ }

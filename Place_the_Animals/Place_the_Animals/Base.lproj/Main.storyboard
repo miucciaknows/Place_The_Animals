@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="21" y="4"/>
         </scene>
-        <!--Dog View Controller-->
+        <!--DogViewController-->
         <scene sceneID="s7e-26-vWD">
             <objects>
-                <viewController storyboardIdentifier="DogViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uJc-b5-m5Q" customClass="DogViewController" customModule="Place_the_Animals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DogViewController" title="DogViewController" interactionActivityTrackingBaseName="DogViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uJc-b5-m5Q" customClass="DogViewController" customModule="Place_the_Animals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jDV-Kp-Ne8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,7 @@
         <!--RabbitViewController-->
         <scene sceneID="lEW-2m-pKL">
             <objects>
-                <viewController title="RabbitViewController" interactionActivityTrackingBaseName="RabbitViewController" id="aoQ-JT-Vhl" customClass="RabbitViewController" customModule="Place_the_Animals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RabbitViewController" title="RabbitViewController" interactionActivityTrackingBaseName="RabbitViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aoQ-JT-Vhl" customClass="RabbitViewController" customModule="Place_the_Animals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g28-G7-9vv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,8 +84,8 @@
                                 <rect key="frame" x="16" y="364" width="170" height="206"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzh-Ju-h2q">
-                                <rect key="frame" x="158" y="89" width="71" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzh-Ju-h2q">
+                                <rect key="frame" x="114" y="75" width="164" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>

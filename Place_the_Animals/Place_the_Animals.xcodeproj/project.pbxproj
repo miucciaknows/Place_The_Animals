@@ -16,22 +16,17 @@
 		EAE6A6072BADEA13003E43B3 /* Place_the_AnimalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6062BADEA13003E43B3 /* Place_the_AnimalsTests.swift */; };
 		EAE6A6112BADEA13003E43B3 /* Place_the_AnimalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6102BADEA13003E43B3 /* Place_the_AnimalsUITests.swift */; };
 		EAE6A6132BADEA13003E43B3 /* Place_the_AnimalsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6122BADEA13003E43B3 /* Place_the_AnimalsUITestsLaunchTests.swift */; };
-		EAE6A6202BADEA5C003E43B3 /* AnimalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A61F2BADEA5C003E43B3 /* AnimalPresenter.swift */; };
-		EAE6A6222BADEA76003E43B3 /* AnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6212BADEA76003E43B3 /* AnimalView.swift */; };
-		EAE6A6242BADEA8B003E43B3 /* AnimalGestureHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6232BADEA8B003E43B3 /* AnimalGestureHandlerDelegate.swift */; };
 		EAE6A6262BADEB40003E43B3 /* DogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6252BADEB40003E43B3 /* DogViewController.swift */; };
 		EAE6A6272BADEDCD003E43B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A5F52BADEA11003E43B3 /* Main.storyboard */; };
 		EAE6A6282BADEDCE003E43B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A5F52BADEA11003E43B3 /* Main.storyboard */; };
-		EAE6A62A2BADF220003E43B3 /* AnimalPlacementLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6292BADF220003E43B3 /* AnimalPlacementLogic.swift */; };
-		EAE6A62B2BADF3D4003E43B3 /* AnimalGestureHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6232BADEA8B003E43B3 /* AnimalGestureHandlerDelegate.swift */; };
-		EAE6A62C2BADF3D4003E43B3 /* AnimalGestureHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6232BADEA8B003E43B3 /* AnimalGestureHandlerDelegate.swift */; };
-		EAE6A62D2BADF3D8003E43B3 /* AnimalPlacementLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6292BADF220003E43B3 /* AnimalPlacementLogic.swift */; };
-		EAE6A62E2BADF3D9003E43B3 /* AnimalPlacementLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6292BADF220003E43B3 /* AnimalPlacementLogic.swift */; };
 		EAE6A62F2BADF3E1003E43B3 /* DogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6252BADEB40003E43B3 /* DogViewController.swift */; };
 		EAE6A6302BADF3E2003E43B3 /* DogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6252BADEB40003E43B3 /* DogViewController.swift */; };
 		EAE6A6322BAE01DE003E43B3 /* RabbitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6312BAE01DE003E43B3 /* RabbitViewController.swift */; };
 		EAE6A6332BAE01DE003E43B3 /* RabbitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6312BAE01DE003E43B3 /* RabbitViewController.swift */; };
 		EAE6A6342BAE01DE003E43B3 /* RabbitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6312BAE01DE003E43B3 /* RabbitViewController.swift */; };
+		EAE6A63A2BB300D3003E43B3 /* GestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6392BB300D3003E43B3 /* GestureHandler.swift */; };
+		EAE6A63B2BB300D3003E43B3 /* GestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6392BB300D3003E43B3 /* GestureHandler.swift */; };
+		EAE6A63C2BB300D3003E43B3 /* GestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6392BB300D3003E43B3 /* GestureHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,12 +60,9 @@
 		EAE6A60C2BADEA13003E43B3 /* Place_the_AnimalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Place_the_AnimalsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE6A6102BADEA13003E43B3 /* Place_the_AnimalsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place_the_AnimalsUITests.swift; sourceTree = "<group>"; };
 		EAE6A6122BADEA13003E43B3 /* Place_the_AnimalsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place_the_AnimalsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EAE6A61F2BADEA5C003E43B3 /* AnimalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPresenter.swift; sourceTree = "<group>"; };
-		EAE6A6212BADEA76003E43B3 /* AnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalView.swift; sourceTree = "<group>"; };
-		EAE6A6232BADEA8B003E43B3 /* AnimalGestureHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGestureHandlerDelegate.swift; sourceTree = "<group>"; };
 		EAE6A6252BADEB40003E43B3 /* DogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewController.swift; sourceTree = "<group>"; };
-		EAE6A6292BADF220003E43B3 /* AnimalPlacementLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPlacementLogic.swift; sourceTree = "<group>"; };
 		EAE6A6312BAE01DE003E43B3 /* RabbitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RabbitViewController.swift; sourceTree = "<group>"; };
+		EAE6A6392BB300D3003E43B3 /* GestureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,12 +116,9 @@
 				EAE6A5EF2BADEA11003E43B3 /* AppDelegate.swift */,
 				EAE6A5F12BADEA11003E43B3 /* SceneDelegate.swift */,
 				EAE6A5F32BADEA11003E43B3 /* ViewController.swift */,
-				EAE6A61F2BADEA5C003E43B3 /* AnimalPresenter.swift */,
-				EAE6A6212BADEA76003E43B3 /* AnimalView.swift */,
 				EAE6A6252BADEB40003E43B3 /* DogViewController.swift */,
+				EAE6A6392BB300D3003E43B3 /* GestureHandler.swift */,
 				EAE6A6312BAE01DE003E43B3 /* RabbitViewController.swift */,
-				EAE6A6232BADEA8B003E43B3 /* AnimalGestureHandlerDelegate.swift */,
-				EAE6A6292BADF220003E43B3 /* AnimalPlacementLogic.swift */,
 				EAE6A5F52BADEA11003E43B3 /* Main.storyboard */,
 				EAE6A5F82BADEA13003E43B3 /* Assets.xcassets */,
 				EAE6A5FA2BADEA13003E43B3 /* LaunchScreen.storyboard */,
@@ -288,14 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAE6A6222BADEA76003E43B3 /* AnimalView.swift in Sources */,
 				EAE6A5F42BADEA11003E43B3 /* ViewController.swift in Sources */,
-				EAE6A6242BADEA8B003E43B3 /* AnimalGestureHandlerDelegate.swift in Sources */,
 				EAE6A6322BAE01DE003E43B3 /* RabbitViewController.swift in Sources */,
+				EAE6A63A2BB300D3003E43B3 /* GestureHandler.swift in Sources */,
 				EAE6A5F02BADEA11003E43B3 /* AppDelegate.swift in Sources */,
-				EAE6A6202BADEA5C003E43B3 /* AnimalPresenter.swift in Sources */,
 				EAE6A5F22BADEA11003E43B3 /* SceneDelegate.swift in Sources */,
-				EAE6A62A2BADF220003E43B3 /* AnimalPlacementLogic.swift in Sources */,
 				EAE6A6262BADEB40003E43B3 /* DogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,10 +290,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE6A63B2BB300D3003E43B3 /* GestureHandler.swift in Sources */,
 				EAE6A6072BADEA13003E43B3 /* Place_the_AnimalsTests.swift in Sources */,
 				EAE6A6332BAE01DE003E43B3 /* RabbitViewController.swift in Sources */,
-				EAE6A62B2BADF3D4003E43B3 /* AnimalGestureHandlerDelegate.swift in Sources */,
-				EAE6A62D2BADF3D8003E43B3 /* AnimalPlacementLogic.swift in Sources */,
 				EAE6A62F2BADF3E1003E43B3 /* DogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,11 +302,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE6A6342BAE01DE003E43B3 /* RabbitViewController.swift in Sources */,
-				EAE6A62C2BADF3D4003E43B3 /* AnimalGestureHandlerDelegate.swift in Sources */,
 				EAE6A6132BADEA13003E43B3 /* Place_the_AnimalsUITestsLaunchTests.swift in Sources */,
-				EAE6A62E2BADF3D9003E43B3 /* AnimalPlacementLogic.swift in Sources */,
 				EAE6A6302BADF3E2003E43B3 /* DogViewController.swift in Sources */,
 				EAE6A6112BADEA13003E43B3 /* Place_the_AnimalsUITests.swift in Sources */,
+				EAE6A63C2BB300D3003E43B3 /* GestureHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
