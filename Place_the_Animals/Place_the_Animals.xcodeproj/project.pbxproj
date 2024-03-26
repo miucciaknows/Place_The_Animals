@@ -36,6 +36,15 @@
 		EAE6A6462BB33016003E43B3 /* SnakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6452BB33016003E43B3 /* SnakeViewController.swift */; };
 		EAE6A6472BB33016003E43B3 /* SnakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6452BB33016003E43B3 /* SnakeViewController.swift */; };
 		EAE6A6482BB33016003E43B3 /* SnakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6452BB33016003E43B3 /* SnakeViewController.swift */; };
+		EAE6A64A2BB3393A003E43B3 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6492BB3393A003E43B3 /* ScoreManager.swift */; };
+		EAE6A64B2BB3393A003E43B3 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6492BB3393A003E43B3 /* ScoreManager.swift */; };
+		EAE6A64C2BB3393A003E43B3 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6A6492BB3393A003E43B3 /* ScoreManager.swift */; };
+		EAE6A6542BB36125003E43B3 /* ADELIA.otf in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A6532BB35867003E43B3 /* ADELIA.otf */; };
+		EAE6A6552BB36125003E43B3 /* ADELIA.otf in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A6532BB35867003E43B3 /* ADELIA.otf */; };
+		EAE6A6562BB36126003E43B3 /* ADELIA.otf in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A6532BB35867003E43B3 /* ADELIA.otf */; };
+		EAE6A6572BB36129003E43B3 /* Whocats.otf in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A6522BB35867003E43B3 /* Whocats.otf */; };
+		EAE6A6582BB36129003E43B3 /* Whocats.otf in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A6522BB35867003E43B3 /* Whocats.otf */; };
+		EAE6A6592BB3612A003E43B3 /* Whocats.otf in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A6522BB35867003E43B3 /* Whocats.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +84,9 @@
 		EAE6A63D2BB32FF7003E43B3 /* BeardDragonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeardDragonViewController.swift; sourceTree = "<group>"; };
 		EAE6A6412BB33005003E43B3 /* BirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdViewController.swift; sourceTree = "<group>"; };
 		EAE6A6452BB33016003E43B3 /* SnakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeViewController.swift; sourceTree = "<group>"; };
+		EAE6A6492BB3393A003E43B3 /* ScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
+		EAE6A6522BB35867003E43B3 /* Whocats.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Whocats.otf; path = Assets.xcassets/Fonts/Whocats.otf; sourceTree = "<group>"; };
+		EAE6A6532BB35867003E43B3 /* ADELIA.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ADELIA.otf; path = Assets.xcassets/Fonts/ADELIA.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,15 +140,18 @@
 				EAE6A5EF2BADEA11003E43B3 /* AppDelegate.swift */,
 				EAE6A5F12BADEA11003E43B3 /* SceneDelegate.swift */,
 				EAE6A5F32BADEA11003E43B3 /* ViewController.swift */,
-				EAE6A6252BADEB40003E43B3 /* DogViewController.swift */,
 				EAE6A6392BB300D3003E43B3 /* GestureHandler.swift */,
+				EAE6A6492BB3393A003E43B3 /* ScoreManager.swift */,
+				EAE6A6252BADEB40003E43B3 /* DogViewController.swift */,
 				EAE6A6312BAE01DE003E43B3 /* RabbitViewController.swift */,
 				EAE6A63D2BB32FF7003E43B3 /* BeardDragonViewController.swift */,
 				EAE6A6452BB33016003E43B3 /* SnakeViewController.swift */,
 				EAE6A6412BB33005003E43B3 /* BirdViewController.swift */,
 				EAE6A5F52BADEA11003E43B3 /* Main.storyboard */,
+				EAE6A6532BB35867003E43B3 /* ADELIA.otf */,
 				EAE6A5F82BADEA13003E43B3 /* Assets.xcassets */,
 				EAE6A5FA2BADEA13003E43B3 /* LaunchScreen.storyboard */,
+				EAE6A6522BB35867003E43B3 /* Whocats.otf */,
 				EAE6A5FD2BADEA13003E43B3 /* Info.plist */,
 			);
 			path = Place_the_Animals;
@@ -264,6 +279,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE6A5FC2BADEA13003E43B3 /* LaunchScreen.storyboard in Resources */,
+				EAE6A6572BB36129003E43B3 /* Whocats.otf in Resources */,
+				EAE6A6542BB36125003E43B3 /* ADELIA.otf in Resources */,
 				EAE6A5F92BADEA13003E43B3 /* Assets.xcassets in Resources */,
 				EAE6A5F72BADEA11003E43B3 /* Main.storyboard in Resources */,
 			);
@@ -273,7 +290,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE6A6582BB36129003E43B3 /* Whocats.otf in Resources */,
 				EAE6A6272BADEDCD003E43B3 /* Main.storyboard in Resources */,
+				EAE6A6552BB36125003E43B3 /* ADELIA.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +300,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE6A6592BB3612A003E43B3 /* Whocats.otf in Resources */,
 				EAE6A6282BADEDCE003E43B3 /* Main.storyboard in Resources */,
+				EAE6A6562BB36126003E43B3 /* ADELIA.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +315,7 @@
 			files = (
 				EAE6A5F42BADEA11003E43B3 /* ViewController.swift in Sources */,
 				EAE6A6462BB33016003E43B3 /* SnakeViewController.swift in Sources */,
+				EAE6A64A2BB3393A003E43B3 /* ScoreManager.swift in Sources */,
 				EAE6A6322BAE01DE003E43B3 /* RabbitViewController.swift in Sources */,
 				EAE6A63E2BB32FF7003E43B3 /* BeardDragonViewController.swift in Sources */,
 				EAE6A6422BB33005003E43B3 /* BirdViewController.swift in Sources */,
@@ -312,6 +334,7 @@
 				EAE6A6072BADEA13003E43B3 /* Place_the_AnimalsTests.swift in Sources */,
 				EAE6A63F2BB32FF7003E43B3 /* BeardDragonViewController.swift in Sources */,
 				EAE6A6432BB33005003E43B3 /* BirdViewController.swift in Sources */,
+				EAE6A64B2BB3393A003E43B3 /* ScoreManager.swift in Sources */,
 				EAE6A6472BB33016003E43B3 /* SnakeViewController.swift in Sources */,
 				EAE6A6332BAE01DE003E43B3 /* RabbitViewController.swift in Sources */,
 				EAE6A62F2BADF3E1003E43B3 /* DogViewController.swift in Sources */,
@@ -325,6 +348,7 @@
 				EAE6A6342BAE01DE003E43B3 /* RabbitViewController.swift in Sources */,
 				EAE6A6442BB33005003E43B3 /* BirdViewController.swift in Sources */,
 				EAE6A6132BADEA13003E43B3 /* Place_the_AnimalsUITestsLaunchTests.swift in Sources */,
+				EAE6A64C2BB3393A003E43B3 /* ScoreManager.swift in Sources */,
 				EAE6A6302BADF3E2003E43B3 /* DogViewController.swift in Sources */,
 				EAE6A6112BADEA13003E43B3 /* Place_the_AnimalsUITests.swift in Sources */,
 				EAE6A6482BB33016003E43B3 /* SnakeViewController.swift in Sources */,
