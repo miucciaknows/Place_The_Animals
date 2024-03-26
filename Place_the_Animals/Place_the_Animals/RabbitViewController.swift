@@ -56,7 +56,7 @@ class RabbitViewController: UIViewController, AnimalGestureHandlerDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let beardDragonViewController = storyboard.instantiateViewController(withIdentifier: "BeardDragonViewController") as? BeardDragonViewController {
             print("BeardDragonViewControllerinstanciado com sucesso.")
-            beardDragonViewController.currentScore = self.score
+            beardDragonViewController.currentScore = self.currentScore
             beardDragonViewController.modalPresentationStyle = .overFullScreen
             present(beardDragonViewController, animated: true, completion: nil)
         } else {
