@@ -50,4 +50,17 @@ class RabbitViewController: UIViewController, AnimalGestureHandlerDelegate {
               print("Pontuação atualizada para \(currentScore)")
           }
       }
+    
+    @objc func transitionToBeardDragonViewController() {
+        // Transição para o RabbitViewController
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let beardDragonViewController = storyboard.instantiateViewController(withIdentifier: "BeardDragonViewController") as? BeardDragonViewController {
+            print("BeardDragonViewControllerinstanciado com sucesso.")
+            beardDragonViewController.currentScore = self.score
+            beardDragonViewController.modalPresentationStyle = .overFullScreen
+            present(beardDragonViewController, animated: true, completion: nil)
+        } else {
+            print("Erro ao instanciar BeardDragonViewController")
+        }
+    }
   }
