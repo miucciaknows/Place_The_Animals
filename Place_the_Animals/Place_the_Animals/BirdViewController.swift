@@ -47,14 +47,19 @@ class BirdViewController: UIViewController, AnimalGestureHandlerDelegate {
     
     func checkIfAnimalIsInPlace() {
            UIViewController.checkIfAnimalIsInPlace(animalView: bird, animalPlace: birdplace, currentScore: &currentScore, withPoints: 50, scoreLabel: scoreLabel)
-        updateScoreLabel()
+        checkTransitionCondition()
            
        }
-
-
-
     
- 
+    private func checkTransitionCondition() {
+        if currentScore == 150 {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
+                viewController.modalPresentationStyle = .fullScreen
+                present(viewController, animated: true, completion: nil)
+            }
+        }
+    }
 
 
 }
