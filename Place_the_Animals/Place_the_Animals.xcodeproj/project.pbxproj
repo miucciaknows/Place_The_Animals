@@ -45,6 +45,11 @@
 		EAE6A6572BB36129003E43B3 /* Whocats.otf in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A6522BB35867003E43B3 /* Whocats.otf */; };
 		EAE6A6582BB36129003E43B3 /* Whocats.otf in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A6522BB35867003E43B3 /* Whocats.otf */; };
 		EAE6A6592BB3612A003E43B3 /* Whocats.otf in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A6522BB35867003E43B3 /* Whocats.otf */; };
+		EAE6A65A2BB45AD7003E43B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A5F82BADEA13003E43B3 /* Assets.xcassets */; };
+		EAE6A65B2BB45AD8003E43B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A5F82BADEA13003E43B3 /* Assets.xcassets */; };
+		EAE6A6612BB46278003E43B3 /* funny-spring-jump.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A6602BB46277003E43B3 /* funny-spring-jump.mp3 */; };
+		EAE6A6622BB46278003E43B3 /* funny-spring-jump.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A6602BB46277003E43B3 /* funny-spring-jump.mp3 */; };
+		EAE6A6632BB46278003E43B3 /* funny-spring-jump.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EAE6A6602BB46277003E43B3 /* funny-spring-jump.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +92,7 @@
 		EAE6A6492BB3393A003E43B3 /* ScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
 		EAE6A6522BB35867003E43B3 /* Whocats.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Whocats.otf; path = Assets.xcassets/Fonts/Whocats.otf; sourceTree = "<group>"; };
 		EAE6A6532BB35867003E43B3 /* ADELIA.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ADELIA.otf; path = Assets.xcassets/Fonts/ADELIA.otf; sourceTree = "<group>"; };
+		EAE6A6602BB46277003E43B3 /* funny-spring-jump.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "funny-spring-jump.mp3"; path = "Assets.xcassets/Sounds/funny-spring-jump.dataset/funny-spring-jump.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,9 +154,10 @@
 				EAE6A6452BB33016003E43B3 /* SnakeViewController.swift */,
 				EAE6A6412BB33005003E43B3 /* BirdViewController.swift */,
 				EAE6A5F52BADEA11003E43B3 /* Main.storyboard */,
-				EAE6A6532BB35867003E43B3 /* ADELIA.otf */,
 				EAE6A5F82BADEA13003E43B3 /* Assets.xcassets */,
 				EAE6A5FA2BADEA13003E43B3 /* LaunchScreen.storyboard */,
+				EAE6A6602BB46277003E43B3 /* funny-spring-jump.mp3 */,
+				EAE6A6532BB35867003E43B3 /* ADELIA.otf */,
 				EAE6A6522BB35867003E43B3 /* Whocats.otf */,
 				EAE6A5FD2BADEA13003E43B3 /* Info.plist */,
 			);
@@ -280,6 +287,7 @@
 			files = (
 				EAE6A5FC2BADEA13003E43B3 /* LaunchScreen.storyboard in Resources */,
 				EAE6A6572BB36129003E43B3 /* Whocats.otf in Resources */,
+				EAE6A6612BB46278003E43B3 /* funny-spring-jump.mp3 in Resources */,
 				EAE6A6542BB36125003E43B3 /* ADELIA.otf in Resources */,
 				EAE6A5F92BADEA13003E43B3 /* Assets.xcassets in Resources */,
 				EAE6A5F72BADEA11003E43B3 /* Main.storyboard in Resources */,
@@ -290,8 +298,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE6A6622BB46278003E43B3 /* funny-spring-jump.mp3 in Resources */,
 				EAE6A6582BB36129003E43B3 /* Whocats.otf in Resources */,
 				EAE6A6272BADEDCD003E43B3 /* Main.storyboard in Resources */,
+				EAE6A65A2BB45AD7003E43B3 /* Assets.xcassets in Resources */,
 				EAE6A6552BB36125003E43B3 /* ADELIA.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,8 +310,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE6A6632BB46278003E43B3 /* funny-spring-jump.mp3 in Resources */,
 				EAE6A6592BB3612A003E43B3 /* Whocats.otf in Resources */,
 				EAE6A6282BADEDCE003E43B3 /* Main.storyboard in Resources */,
+				EAE6A65B2BB45AD8003E43B3 /* Assets.xcassets in Resources */,
 				EAE6A6562BB36126003E43B3 /* ADELIA.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
