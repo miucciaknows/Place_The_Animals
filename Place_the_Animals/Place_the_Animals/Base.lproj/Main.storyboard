@@ -242,7 +242,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundCancel" translatesAutoresizingMaskIntoConstraints="NO" id="rPb-W6-axS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundFinal" translatesAutoresizingMaskIntoConstraints="NO" id="rPb-W6-axS">
                                 <rect key="frame" x="-137" y="-114" width="610" height="1094"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -295,7 +295,7 @@
         <image name="background2" width="1000" height="1080"/>
         <image name="background3" width="655" height="1389"/>
         <image name="background4" width="633" height="959"/>
-        <image name="backgroundCancel" width="6693" height="10630"/>
+        <image name="backgroundFinal" width="6693" height="10630"/>
         <image name="bearddragon" width="315" height="315"/>
         <image name="bearddragonplace" width="315" height="315"/>
         <image name="bird" width="315" height="315"/>
