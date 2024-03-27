@@ -14,6 +14,7 @@ class BirdViewController: UIViewController, AnimalGestureHandlerDelegate {
     @IBOutlet weak var bird: UIImageView!
     @IBOutlet weak var birdplace: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var confetti: UIImageView!
     
     
     var currentScore: Int = 0
@@ -35,10 +36,18 @@ class BirdViewController: UIViewController, AnimalGestureHandlerDelegate {
     
  private func updateScoreLabel() {
      scoreLabel.text = "\(currentScore)"
+     // Verificando se atingiu 150 pontos
+        if currentScore == 150 {
+            // Exibe a imagem
+            confetti.isHidden = false
+        } else {
+            confetti.isHidden = true
+        }
  }
     
     func checkIfAnimalIsInPlace() {
            UIViewController.checkIfAnimalIsInPlace(animalView: bird, animalPlace: birdplace, currentScore: &currentScore, withPoints: 50, scoreLabel: scoreLabel)
+        updateScoreLabel()
            
        }
 
