@@ -22,14 +22,6 @@ class SnakeViewController: UIViewController, AnimalGestureHandlerDelegate{
     
     var currentScore: Int = 0
     
-    var score = 400 {
-        didSet {
-            if score == 700 {
-                print("Pontuação atingiu 200 pontos. Iniciando transição para BirdViewController.")
-                transitionToBirdViewController()
-            }
-        }
-    }
     
     var gestureHandler: GestureHandler!
     
@@ -45,28 +37,33 @@ class SnakeViewController: UIViewController, AnimalGestureHandlerDelegate{
     }
     
     func updateScoreLabel() {
-        scoreLabel.text = ": \(score)"
+        scoreLabel.text = "\(currentScore)"
     }
     
     func checkIfAnimalIsInPlace() {
         let animalCenter = CGPoint(x: snake.frame.midX, y: snake.frame.midY)
         if snakeplace.frame.contains(animalCenter) {
             snakeplace.isHidden = true
-            score += 300
+            currentScore += 40
             updateScoreLabel()
-            print("Pontuação atualizada para \(score)")
+            print("Pontuação atualizada para \(currentScore)")
+            checkTransitionCondition()
         }
     }
     
     
 
-    
+    func checkTransitionCondition() {
+        if currentScore == 100 {
+            transitionToBirdViewController()
+        }
+    }
     
     @objc func transitionToBirdViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let birdViewController = storyboard.instantiateViewController(withIdentifier: "BirdViewController") as? BirdViewController {
             print("BirdViewController instanciado com sucesso.")
-            birdViewController.currentScore = score
+            birdViewController.currentScore = currentScore
             birdViewController.modalPresentationStyle = .overFullScreen
             present(birdViewController, animated: true, completion: nil)
         } else {

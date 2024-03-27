@@ -21,15 +21,7 @@ class BeardDragonViewController: UIViewController, AnimalGestureHandlerDelegate 
     
     @IBOutlet weak var scoreLabel: UILabel!
     
-    var score = 200 {
-        didSet {
-            if score == 400 {
-                print("Pontuação atingiu 400 pontos. Iniciando transição para BeardDragonViewController.")
-                transitionToSnakeViewController()
-            }
-        }
-    }
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,10 +49,16 @@ class BeardDragonViewController: UIViewController, AnimalGestureHandlerDelegate 
 
         if overlapPercentage >= 0.95 {
             beardDragonPlace.isHidden = true
-            currentScore += 200
-            score += 200
+            currentScore += 30
             updateScoreLabel()
             print("Pontuação atualizada para \(currentScore)")
+            checkTransitionCondition()
+        }
+    }
+    
+    func checkTransitionCondition() {
+        if currentScore == 60 {
+            transitionToSnakeViewController()
         }
     }
     
@@ -69,7 +67,7 @@ class BeardDragonViewController: UIViewController, AnimalGestureHandlerDelegate 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let snakeViewController = storyboard.instantiateViewController(withIdentifier: "SnakeViewController") as? SnakeViewController{
             print("SnakeViewControllerinstanciado com sucesso.")
-            snakeViewController.currentScore = score
+            snakeViewController.currentScore = currentScore
             snakeViewController.modalPresentationStyle = .overFullScreen
             present(snakeViewController , animated: true, completion: nil)
         } else {

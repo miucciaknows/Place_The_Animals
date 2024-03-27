@@ -18,36 +18,45 @@ class DogViewController: UIViewController, AnimalGestureHandlerDelegate {
     
     var score = 0 {
          didSet {
-             scoreLabel.text = ": \(score)"
-             if score == 50 {
-                 print("Pontuação atingiu 50 pontos. Iniciando transição para RabbitViewController.")
                  transitionToRabbitViewController()
              }
          }
-     }
+     
      
      var gestureHandler: GestureHandler!
      
      override func viewDidLoad() {
          super.viewDidLoad()
          setupGestureHandler()
-         
-         
+         updateScoreLabel()
      }
      
      private func setupGestureHandler() {
          gestureHandler = GestureHandler(view: dog)
          gestureHandler.delegate = self
      }
-     
+    
+    func updateScoreLabel() {
+        scoreLabel.text = "\(score)"
+    }
+    
+    
      func checkIfAnimalIsInPlace() {
          let animalCenter = CGPoint(x: dog.frame.midX, y: dog.frame.midY)
          if dogplace.frame.contains(animalCenter) {
              dogplace.isHidden = true
-             score += 50
+             score += 10
+             updateScoreLabel()
              print("Pontuação atualizada para \(score)")
          }
      }
+    
+
+    func checkTransitionCondition() {
+        if score >= 10 {
+            transitionToRabbitViewController()
+        }
+    }
 
      @objc func transitionToRabbitViewController() {
          let storyboard = UIStoryboard(name: "Main", bundle: nil)

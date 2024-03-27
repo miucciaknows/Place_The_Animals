@@ -13,20 +13,11 @@ class RabbitViewController: UIViewController, AnimalGestureHandlerDelegate {
     
     
     @IBOutlet weak var rabbit: UIImageView!
-    
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var rabbitplace: UIImageView!
     
     var currentScore: Int = 0
        
-       var score = 50 {
-           didSet {
-               if score == 200 {
-                   print("Pontuação atingiu 200 pontos. Iniciando transição para BeardDragonViewController.")
-                   transitionToBeardDragonViewController()
-               }
-           }
-       }
        
        var gestureHandler: GestureHandler!
        
@@ -42,24 +33,32 @@ class RabbitViewController: UIViewController, AnimalGestureHandlerDelegate {
        }
        
        func updateScoreLabel() {
-           scoreLabel.text = "\(score)"
+           scoreLabel.text = "\(currentScore)"
        }
        
        func checkIfAnimalIsInPlace() {
            let animalCenter = CGPoint(x: rabbit.frame.midX, y: rabbit.frame.midY)
            if rabbitplace.frame.contains(animalCenter) {
                rabbitplace.isHidden = true
-               score += 150
+               currentScore += 20
                updateScoreLabel()
-               print("Pontuação atualizada para \(score)")
+               print("Pontuação atualizada para \(currentScore)")
+               checkTransitionCondition()
            }
        }
        
+    func checkTransitionCondition() {
+        if currentScore == 30 {
+            transitionToBeardDragonViewController()
+        }
+    }
+    
+    
        @objc func transitionToBeardDragonViewController() {
            let storyboard = UIStoryboard(name: "Main", bundle: nil)
            if let beardDragonViewController = storyboard.instantiateViewController(withIdentifier: "BeardDragonViewController") as? BeardDragonViewController {
                print("BeardDragonViewController instanciado com sucesso.")
-               beardDragonViewController.currentScore = score
+               beardDragonViewController.currentScore = currentScore
                beardDragonViewController.modalPresentationStyle = .overFullScreen
                present(beardDragonViewController, animated: true, completion: nil)
            } else {

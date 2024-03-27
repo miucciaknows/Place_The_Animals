@@ -20,7 +20,6 @@ class BirdViewController: UIViewController, AnimalGestureHandlerDelegate {
     
     var currentScore: Int = 0
     
-    var score = 700
     
     var gestureHandler: GestureHandler!
     
@@ -36,16 +35,16 @@ class BirdViewController: UIViewController, AnimalGestureHandlerDelegate {
     }
     
     func updateScoreLabel() {
-        scoreLabel.text = "\(score)"
+        scoreLabel.text = "\(currentScore)"
     }
     
     func checkIfAnimalIsInPlace() {
         let animalCenter = CGPoint(x: bird.frame.midX, y: bird.frame.midY)
         if birdplace.frame.contains(animalCenter) {
             birdplace.isHidden = true
-            score += 500
+            currentScore += 50
             updateScoreLabel()
-            print("Pontuação atualizada para \(score)")
+            print("Pontuação atualizada para \(currentScore)")
         }
     }
     
