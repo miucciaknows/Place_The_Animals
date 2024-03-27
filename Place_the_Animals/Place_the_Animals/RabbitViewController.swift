@@ -9,31 +9,30 @@ import Foundation
 import UIKit
 
 class RabbitViewController: UIViewController, AnimalGestureHandlerDelegate {
-
     
+    // MARK: - Outlets, Propriedades e Variaveis
     
     @IBOutlet weak var rabbit: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var rabbitplace: UIImageView!
+    
+    var gestureHandler: GestureHandler!
    
     var currentScore: Int = 0 {
         didSet {
             print("RabbitViewController - Current score updated: \(currentScore)")
         }
     }
-    
-    var gestureHandler: GestureHandler!
 
-    // Funções de ciclo de vida e métodos
-
+    // MARK: - Funções de ciclo de vida e métodos
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGestureHandler()
-        checkIfAnimalIsInPlace() // Mover para após a chamada de updateScoreLabel()
+        checkIfAnimalIsInPlace()
         updateScoreLabel()
     }
 
-    // Funções auxiliares
+    // MARK: - Funções auxiliares
 
     private func setupGestureHandler() {
         gestureHandler = setupGestureHandler(for: rabbit, with: self)
@@ -44,17 +43,12 @@ class RabbitViewController: UIViewController, AnimalGestureHandlerDelegate {
         print("RabbitViewController - Score label updated to: \(currentScore)")
     }
 
-    internal func checkIfAnimalIsInPlace() {
-        let animalCenter = CGPoint(x: rabbit.frame.midX, y: rabbit.frame.midY)
-        if rabbitplace.frame.contains(animalCenter) {
-            rabbitplace.isHidden = true
-            currentScore += 20
-            updateScoreLabel()
-            print("RabbitViewController - Pontuação atualizada para \(currentScore)")
-            checkTransitionCondition()
+    func checkIfAnimalIsInPlace() {
+            UIViewController.checkIfAnimalIsInPlace(animalView: rabbit, animalPlace: rabbitplace, currentScore: &currentScore, withPoints: 20, scoreLabel: scoreLabel)
+             checkTransitionCondition()
         }
-    }
 
+    // Função para alterar para a tela BeardDragonViewController
     private func checkTransitionCondition() {
         if currentScore == 30 {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

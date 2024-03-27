@@ -11,14 +11,17 @@ import UIKit
 
 class SnakeViewController: UIViewController, AnimalGestureHandlerDelegate {
     
-    var currentScore: Int = 0
-    var gestureHandler: GestureHandler!
     
+    // MARK: - Outlets, Propriedades e Variaveis
+ 
     @IBOutlet weak var snake: UIImageView!
     @IBOutlet weak var snakeplace: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     
+    var currentScore: Int = 0
+    var gestureHandler: GestureHandler!
     
+    // MARK: - Funções de ciclo de vida e métodos
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGestureHandler()
@@ -26,6 +29,8 @@ class SnakeViewController: UIViewController, AnimalGestureHandlerDelegate {
      
     }
 
+    // MARK: - Funções auxiliares
+    
     private func setupGestureHandler() {
         gestureHandler = setupGestureHandler(for: snake, with: self)
     }
@@ -40,7 +45,7 @@ class SnakeViewController: UIViewController, AnimalGestureHandlerDelegate {
             checkTransitionCondition()
        }
 
-    
+    // Função para alterar para a tela BirdViewController
     private func checkTransitionCondition() {
         if currentScore == 100 {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
