@@ -9,67 +9,47 @@ import Foundation
 import UIKit
 
 
-class SnakeViewController: UIViewController, AnimalGestureHandlerDelegate{
-    
-
-    
-    @IBOutlet weak var snake: UIImageView!
-    
-    @IBOutlet weak var snakeplace: UIImageView!
-    
-    
-    @IBOutlet weak var scoreLabel: UILabel!
+class SnakeViewController: UIViewController, AnimalGestureHandlerDelegate {
     
     var currentScore: Int = 0
-    
-    
     var gestureHandler: GestureHandler!
+    
+    @IBOutlet weak var snake: UIImageView!
+    @IBOutlet weak var snakeplace: UIImageView!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGestureHandler()
         updateScoreLabel()
+     
     }
+
+    private func setupGestureHandler() {
+        gestureHandler = setupGestureHandler(for: snake, with: self)
+    }
+ 
     
-    func setupGestureHandler() {
-        gestureHandler = GestureHandler(view: snake)
-        gestureHandler.delegate = self
-    }
-    
-    func updateScoreLabel() {
-        scoreLabel.text = "\(currentScore)"
-    }
+ private func updateScoreLabel() {
+     scoreLabel.text = "\(currentScore)"
+ }
     
     func checkIfAnimalIsInPlace() {
-        let animalCenter = CGPoint(x: snake.frame.midX, y: snake.frame.midY)
-        if snakeplace.frame.contains(animalCenter) {
-            snakeplace.isHidden = true
-            currentScore += 40
-            updateScoreLabel()
-            print("Pontuação atualizada para \(currentScore)")
+           UIViewController.checkIfAnimalIsInPlace(animalView: snake, animalPlace: snakeplace, currentScore: &currentScore, withPoints: 40, scoreLabel: scoreLabel)
             checkTransitionCondition()
-        }
-    }
-    
-    
+       }
 
-    func checkTransitionCondition() {
+    
+    private func checkTransitionCondition() {
         if currentScore == 100 {
-            transitionToBirdViewController()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let birdViewController = storyboard.instantiateViewController(withIdentifier: "BirdViewController") as? BirdViewController {
+                birdViewController.currentScore = currentScore
+                birdViewController.modalPresentationStyle = .fullScreen
+                present(birdViewController, animated: true, completion: nil)
+            }
         }
     }
-    
-    @objc func transitionToBirdViewController() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let birdViewController = storyboard.instantiateViewController(withIdentifier: "BirdViewController") as? BirdViewController {
-            print("BirdViewController instanciado com sucesso.")
-            birdViewController.currentScore = currentScore
-            birdViewController.modalPresentationStyle = .overFullScreen
-            present(birdViewController, animated: true, completion: nil)
-        } else {
-            print("Erro ao instanciar BirdViewController")
-        }
-    }
-    
-    
+
 }

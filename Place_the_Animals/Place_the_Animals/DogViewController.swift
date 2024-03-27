@@ -16,57 +16,53 @@ class DogViewController: UIViewController, AnimalGestureHandlerDelegate {
     @IBOutlet weak var dog: UIImageView!
     @IBOutlet weak var dogplace: UIImageView!
     
-    var score = 0 {
+
+    var gestureHandler: GestureHandler!
+    
+    var currentScore: Int = 0 {
          didSet {
-                 transitionToRabbitViewController()
-             }
+             print("DogViewController - Current score updated: \(currentScore)")
          }
+     }
      
-     
-     var gestureHandler: GestureHandler!
+     // Funções de ciclo de vida e métodos
      
      override func viewDidLoad() {
          super.viewDidLoad()
          setupGestureHandler()
          updateScoreLabel()
+         checkIfAnimalIsInPlace() // Mover para após a chamada de updateScoreLabel()
      }
      
+     // Funções auxiliares
+     
      private func setupGestureHandler() {
-         gestureHandler = GestureHandler(view: dog)
-         gestureHandler.delegate = self
+         gestureHandler = setupGestureHandler(for: dog, with: self)
      }
-    
-    func updateScoreLabel() {
-        scoreLabel.text = "\(score)"
-    }
-    
-    
-     func checkIfAnimalIsInPlace() {
+     
+     private func updateScoreLabel() {
+         updateScoreLabel(scoreLabel, with: currentScore)
+         print("DogViewController - Score label updated to: \(currentScore)")
+     }
+     
+    internal func checkIfAnimalIsInPlace() {
          let animalCenter = CGPoint(x: dog.frame.midX, y: dog.frame.midY)
          if dogplace.frame.contains(animalCenter) {
              dogplace.isHidden = true
-             score += 10
+             currentScore += 10
              updateScoreLabel()
-             print("Pontuação atualizada para \(score)")
+             print("DogViewController - Pontuação atualizada para \(currentScore)")
+             checkTransitionCondition()
          }
      }
-    
-
-    func checkTransitionCondition() {
-        if score >= 10 {
-            transitionToRabbitViewController()
+    private func checkTransitionCondition() {
+        if currentScore == 10 {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let rabbitViewController = storyboard.instantiateViewController(withIdentifier: "RabbitViewController") as? RabbitViewController {
+                rabbitViewController.currentScore = currentScore
+                rabbitViewController.modalPresentationStyle = .fullScreen // Definir como fullscreen
+                present(rabbitViewController, animated: true, completion: nil)
+            }
         }
     }
-
-     @objc func transitionToRabbitViewController() {
-         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-         if let rabbitViewController = storyboard.instantiateViewController(withIdentifier: "RabbitViewController") as? RabbitViewController {
-             print("RabbitViewController instanciado com sucesso.")
-             rabbitViewController.currentScore = score
-             rabbitViewController.modalPresentationStyle = .overFullScreen
-             present(rabbitViewController, animated: true, completion: nil)
-         } else {
-             print("Erro ao instanciar RabbitViewController")
-         }
-     }
  }

@@ -21,57 +21,36 @@ class BeardDragonViewController: UIViewController, AnimalGestureHandlerDelegate 
     
     @IBOutlet weak var scoreLabel: UILabel!
     
-
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupGestureHandler()
-        updateScoreLabel()
+       
+       override func viewDidLoad() {
+           super.viewDidLoad()
+           setupGestureHandler()
+           updateScoreLabel()
+       }
+       
+    private func setupGestureHandler() {
+        gestureHandler = setupGestureHandler(for: beardDragon, with: self)
     }
-    
-    func setupGestureHandler() {
-        gestureHandler = GestureHandler(view: beardDragon)
-        gestureHandler.delegate = self
-    }
-    
-    func updateScoreLabel() {
+
+       
+    private func updateScoreLabel() {
         scoreLabel.text = "\(currentScore)"
     }
+       
     
     func checkIfAnimalIsInPlace() {
-        let beardDragonFrame = beardDragon.convert(beardDragon.bounds, to: view)
-        let beardDragonPlaceFrame = beardDragonPlace.frame
-
-        let intersectionRect = beardDragonFrame.intersection(beardDragonPlaceFrame)
-        let overlapArea = intersectionRect.width * intersectionRect.height
-        let shadowArea = beardDragonPlaceFrame.width * beardDragonPlaceFrame.height
-        let overlapPercentage = overlapArea / shadowArea
-
-        if overlapPercentage >= 0.95 {
-            beardDragonPlace.isHidden = true
-            currentScore += 30
-            updateScoreLabel()
-            print("Pontuação atualizada para \(currentScore)")
+           UIViewController.checkIfAnimalIsInPlace(animalView: beardDragon, animalPlace: beardDragonPlace, currentScore: &currentScore, withPoints: 30, scoreLabel: scoreLabel)
             checkTransitionCondition()
-        }
-    }
-    
-    func checkTransitionCondition() {
+       }
+  
+    private func checkTransitionCondition() {
         if currentScore == 60 {
-            transitionToSnakeViewController()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let snakeViewController = storyboard.instantiateViewController(withIdentifier: "SnakeViewController") as? SnakeViewController {
+                snakeViewController.currentScore = currentScore
+                snakeViewController.modalPresentationStyle = .fullScreen
+                present(snakeViewController, animated: true, completion: nil)
+            }
         }
     }
-    
-    
-    @objc func transitionToSnakeViewController() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let snakeViewController = storyboard.instantiateViewController(withIdentifier: "SnakeViewController") as? SnakeViewController{
-            print("SnakeViewControllerinstanciado com sucesso.")
-            snakeViewController.currentScore = currentScore
-            snakeViewController.modalPresentationStyle = .overFullScreen
-            present(snakeViewController , animated: true, completion: nil)
-        } else {
-            print("Erro ao instanciar SnakeViewController")
-        }
-    }
-}
+   }

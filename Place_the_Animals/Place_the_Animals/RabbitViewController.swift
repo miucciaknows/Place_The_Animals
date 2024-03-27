@@ -15,54 +15,54 @@ class RabbitViewController: UIViewController, AnimalGestureHandlerDelegate {
     @IBOutlet weak var rabbit: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var rabbitplace: UIImageView!
-    
-    var currentScore: Int = 0
-       
-       
-       var gestureHandler: GestureHandler!
-       
-       override func viewDidLoad() {
-           super.viewDidLoad()
-           setupGestureHandler()
-           updateScoreLabel()
-       }
-       
-       func setupGestureHandler() {
-           gestureHandler = GestureHandler(view: rabbit)
-           gestureHandler.delegate = self
-       }
-       
-       func updateScoreLabel() {
-           scoreLabel.text = "\(currentScore)"
-       }
-       
-       func checkIfAnimalIsInPlace() {
-           let animalCenter = CGPoint(x: rabbit.frame.midX, y: rabbit.frame.midY)
-           if rabbitplace.frame.contains(animalCenter) {
-               rabbitplace.isHidden = true
-               currentScore += 20
-               updateScoreLabel()
-               print("Pontuação atualizada para \(currentScore)")
-               checkTransitionCondition()
-           }
-       }
-       
-    func checkTransitionCondition() {
-        if currentScore == 30 {
-            transitionToBeardDragonViewController()
+   
+    var currentScore: Int = 0 {
+        didSet {
+            print("RabbitViewController - Current score updated: \(currentScore)")
         }
     }
     
-    
-       @objc func transitionToBeardDragonViewController() {
-           let storyboard = UIStoryboard(name: "Main", bundle: nil)
-           if let beardDragonViewController = storyboard.instantiateViewController(withIdentifier: "BeardDragonViewController") as? BeardDragonViewController {
-               print("BeardDragonViewController instanciado com sucesso.")
-               beardDragonViewController.currentScore = currentScore
-               beardDragonViewController.modalPresentationStyle = .overFullScreen
-               present(beardDragonViewController, animated: true, completion: nil)
-           } else {
-               print("Erro ao instanciar BeardDragonViewController")
-           }
-       }
-   }
+    var gestureHandler: GestureHandler!
+
+    // Funções de ciclo de vida e métodos
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupGestureHandler()
+        checkIfAnimalIsInPlace() // Mover para após a chamada de updateScoreLabel()
+        updateScoreLabel()
+    }
+
+    // Funções auxiliares
+
+    private func setupGestureHandler() {
+        gestureHandler = setupGestureHandler(for: rabbit, with: self)
+    }
+
+    private func updateScoreLabel() {
+        scoreLabel.text = "\(currentScore)"
+        print("RabbitViewController - Score label updated to: \(currentScore)")
+    }
+
+    internal func checkIfAnimalIsInPlace() {
+        let animalCenter = CGPoint(x: rabbit.frame.midX, y: rabbit.frame.midY)
+        if rabbitplace.frame.contains(animalCenter) {
+            rabbitplace.isHidden = true
+            currentScore += 20
+            updateScoreLabel()
+            print("RabbitViewController - Pontuação atualizada para \(currentScore)")
+            checkTransitionCondition()
+        }
+    }
+
+    private func checkTransitionCondition() {
+        if currentScore == 30 {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let beardDragonViewController = storyboard.instantiateViewController(withIdentifier: "BeardDragonViewController") as? BeardDragonViewController {
+                beardDragonViewController.currentScore = currentScore
+                beardDragonViewController.modalPresentationStyle = .fullScreen
+                present(beardDragonViewController, animated: true, completion: nil)
+            }
+        }
+    }
+}

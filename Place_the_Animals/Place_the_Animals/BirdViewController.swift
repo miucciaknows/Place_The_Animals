@@ -10,43 +10,38 @@ import UIKit
 
 class BirdViewController: UIViewController, AnimalGestureHandlerDelegate {
     
-    
-    
-    @IBOutlet weak var bird: UIImageView!
-    
-    @IBOutlet weak var birdplace: UIImageView!
-    
-    @IBOutlet weak var scoreLabel: UILabel!
-    
     var currentScore: Int = 0
-    
-    
     var gestureHandler: GestureHandler!
     
+    @IBOutlet weak var bird: UIImageView!
+    @IBOutlet weak var birdplace: UIImageView!
+    @IBOutlet weak var scoreLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGestureHandler()
         updateScoreLabel()
+   
     }
     
-    func setupGestureHandler() {
-        gestureHandler = GestureHandler(view: bird)
-        gestureHandler.delegate = self
+    private func setupGestureHandler() {
+        gestureHandler = setupGestureHandler(for: bird, with: self)
     }
+ 
     
-    func updateScoreLabel() {
-        scoreLabel.text = "\(currentScore)"
-    }
+ private func updateScoreLabel() {
+     scoreLabel.text = "\(currentScore)"
+ }
     
     func checkIfAnimalIsInPlace() {
-        let animalCenter = CGPoint(x: bird.frame.midX, y: bird.frame.midY)
-        if birdplace.frame.contains(animalCenter) {
-            birdplace.isHidden = true
-            currentScore += 50
-            updateScoreLabel()
-            print("Pontuação atualizada para \(currentScore)")
-        }
-    }
+           UIViewController.checkIfAnimalIsInPlace(animalView: bird, animalPlace: birdplace, currentScore: &currentScore, withPoints: 50, scoreLabel: scoreLabel)
+           
+       }
+
+
+
     
-    
+ 
+
+
 }
