@@ -37,7 +37,7 @@ class DogViewController: UIViewController, AnimalGestureHandlerDelegate {
          setupGestureHandler()
          // Atualiza o label de score
          updateScoreLabel()
-         // Verifica se o animal está no lugar CORRETO
+         // Verifica se o animal está no lugar correto
          checkIfAnimalIsInPlace()
      }
     // MARK: - Funções auxiliares
@@ -61,6 +61,8 @@ class DogViewController: UIViewController, AnimalGestureHandlerDelegate {
            UIViewController.checkIfAnimalIsInPlace(animalView: dog, animalPlace: dogplace, currentScore: &currentScore, withPoints: 10, scoreLabel: scoreLabel)
             checkTransitionCondition()
        }
+    
+
 
     // Função para alterar para a tela RabbitViewController.
     private func checkTransitionCondition() {
